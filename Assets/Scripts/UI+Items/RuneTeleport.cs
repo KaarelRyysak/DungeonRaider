@@ -8,7 +8,7 @@ public class RuneTeleport : MonoBehaviour, Consumable {
     SpriteRenderer spriteRenderer;
     public Color normalColor;
     public Color highlightColor;
-    GameObject player;
+    private GameObject player;
     public float interactRange = 1.5f;
     public float itemSize = 0.2f;
     public InventoryButton lmb;

@@ -5,10 +5,13 @@ using UnityEngine;
 public class MousePointer : MonoBehaviour {
 
     public List<InventoryButton> buttons;
+    private GameObject player;
+    public float maxRadius = 0.5f;
 
 	// Use this for initialization
 	void Start () {
-		
+        //Finds the gameobject called "Player" and assigns it
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -27,7 +30,23 @@ public class MousePointer : MonoBehaviour {
         //    0
         //    );
 
-        transform.position = worldPoint;
+        //worldPoint = Vector3.ClampMagnitude(worldPoint, maxRadius);
+
+        //// C#
+        //Vector3 v = worldPoint - player.transform.position;
+        //v = Vector3.ClampMagnitude(v, maxRadius);
+        //worldPoint = player.transform.position + v;
+        
+
+        Vector3 playerToMouse = worldPoint - player.transform.position;
+
+        
+        playerToMouse = new Vector3(playerToMouse.x, playerToMouse.y, 0f);
+        playerToMouse = Vector3.ClampMagnitude(playerToMouse, maxRadius);
+
+
+
+        transform.position = player.transform.position + playerToMouse;
         
     }
 
