@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public static PlayerMovement instance;
     public CharacterController2D Controller;
     public Animator animator;
 
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        instance = this;
         //vMoveNew = transform.position.y;
 	}
 	
