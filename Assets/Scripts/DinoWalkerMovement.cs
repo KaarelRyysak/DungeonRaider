@@ -15,6 +15,7 @@ public class DinoWalkerMovement : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        animator.SetBool("IsTrigger", false);
         startTime = Time.time;
 
         if (isWalking == true)
