@@ -15,6 +15,8 @@ public class CharacterController : MonoBehaviour {
     float groundRadius = 0.02f;
     public LayerMask whatIsGround;
 
+    //private TimeController timeController;
+
     public KeyCode jump;
     public KeyCode jumpAlt;
 
@@ -29,6 +31,7 @@ public class CharacterController : MonoBehaviour {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         timeSinceLastJump = Time.time;
+        //timeController = gameObject.GetComponent<TimeController>();
 
     }
 	
@@ -78,6 +81,7 @@ public class CharacterController : MonoBehaviour {
             anim.SetBool("IsJumping", true);
             rb2D.AddForce(new Vector2(0, JumpForce));
         }
+        
     }
 
     void Flip()

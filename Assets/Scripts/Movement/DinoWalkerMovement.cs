@@ -13,8 +13,13 @@ public class DinoWalkerMovement : MonoBehaviour {
 
     private float startTime;
 
+    private Rigidbody2D rb2D;
+
     // Use this for initialization
     void Start () {
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
+        rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+
         animator.SetBool("IsTrigger", false);
         startTime = Time.time;
 

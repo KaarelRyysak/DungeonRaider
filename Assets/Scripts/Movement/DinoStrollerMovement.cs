@@ -19,9 +19,14 @@ public class DinoStrollerMovement : MonoBehaviour {
     private float leftLocalx;
     private float rightLocalx;
 
+    private Rigidbody2D rb2D;
+
 
     // Use this for initialization
     void Start () {
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
+        rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+
         startTime = Time.time;
         runSpeedWaypoint = runSpeed;
         rightLocalx = rightWaypoint.transform.localPosition.x;
