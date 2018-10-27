@@ -12,10 +12,10 @@ public class CharacterController : MonoBehaviour {
     Animator anim;
     bool grounded = false;
     public Transform groundCheck;
-    float groundRadius = 0.02f;
+    float groundRadius = 0.01f;
     public LayerMask whatIsGround;
 
-    //private TimeController timeController;
+    private TimeController timeController;
 
     public KeyCode jump;
     public KeyCode jumpAlt;
@@ -25,19 +25,21 @@ public class CharacterController : MonoBehaviour {
     private float timeSinceLastJump;
     private float timeBetweenJumps = 0.1f;
 
+    public float timeCompensationSpeed = 0.5f;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         timeSinceLastJump = Time.time;
-        //timeController = gameObject.GetComponent<TimeController>();
+        timeController = gameObject.GetComponent<TimeController>();
 
     }
 	
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
-
+        
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         anim.SetBool("IsJumping", !grounded);
@@ -46,6 +48,7 @@ public class CharacterController : MonoBehaviour {
 
 
         float move = Input.GetAxis("Horizontal");
+
 
         rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
 
