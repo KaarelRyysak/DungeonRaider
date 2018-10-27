@@ -7,6 +7,7 @@ public class MousePointer : MonoBehaviour {
     public List<InventoryButton> buttons;
     private GameObject player;
     public float maxRadius = 0.5f;
+    public GameObject cursor;
 
 	// Use this for initialization
 	void Start () {
@@ -24,19 +25,20 @@ public class MousePointer : MonoBehaviour {
         Bounds bounds = OrthographicBounds(Camera.main);
 
 
-        //worldPoint = new Vector3(
-        //    Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
-        //    Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
-        //    0
-        //    );
+        Vector3 worldPoint2 = new Vector3(
+            Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
+            Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
+            0
+            );
 
-        //worldPoint = Vector3.ClampMagnitude(worldPoint, maxRadius);
+        worldPoint2 = Vector3.ClampMagnitude(worldPoint2, maxRadius);
+        cursor.transform.position = new Vector3(worldPoint.x, worldPoint.y, cursor.transform.position.z);
 
         //// C#
         //Vector3 v = worldPoint - player.transform.position;
         //v = Vector3.ClampMagnitude(v, maxRadius);
         //worldPoint = player.transform.position + v;
-        
+
 
         Vector3 playerToMouse = worldPoint - player.transform.position;
 
