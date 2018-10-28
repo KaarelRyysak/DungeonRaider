@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour {
 
-    
     //Conditions
     private bool facingRight = true;
     private bool isHit = false;
@@ -34,7 +33,7 @@ public class CharacterController : MonoBehaviour {
 
     //Other
     private Rigidbody2D rb2D;
-
+    private Vector3 initialTransformPosition;
 
     // Use this for initialization
     void Start () {
@@ -43,9 +42,14 @@ public class CharacterController : MonoBehaviour {
         timeSinceLastJump = Time.time;
         timeController = gameObject.GetComponent<TimeController>();
         PlayerDeathController = gameObject.GetComponent<PlayerDeathController>();
-
+        initialTransformPosition = this.transform.position;
     }
 	
+    void resetPlayerPosition()
+    {
+        rb2D.velocity = Vector3.zero;
+        this.transform.position = initialTransformPosition;
+    }
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
 
@@ -53,11 +57,11 @@ public class CharacterController : MonoBehaviour {
         {
             if (facingRight == true)
             { //paremale suunatud
-                deathMove(1);
+                //deathMove(1);
             }
             else
             { //vasakule suunatud
-                deathMove(-1);
+                //deathMove(-1);
             }
         }
         else {
@@ -69,8 +73,10 @@ public class CharacterController : MonoBehaviour {
 
             float move = Input.GetAxis("Horizontal");
 
-
-            rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) //Need to check, otherwise leftward force vectors in collisions don't work.
+            {
+                rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
+            }
 
             anim.SetFloat("Speed", Mathf.Abs(move));
 
@@ -130,10 +136,17 @@ public class CharacterController : MonoBehaviour {
             anim.SetBool("Hit", true);
             anim.SetBool("IsJumping", false);
             isHit = true;
+            //SetAllCollidersStatus(false);           
+            rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
+        }
+    }
 
-            SetAllCollidersStatus(false);
-            rb2D.AddForce(new Vector2(0, JumpForce));
-
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            anim.SetBool("Hit", false);
+            isHit = false;
         }
     }
 
@@ -142,12 +155,7 @@ public class CharacterController : MonoBehaviour {
         isHit = false;
         SetAllCollidersStatus(true);
 
-        this.gameObject.transform.position = new Vector3(
-            -3.79f,
-            -1.69f,
-            0
-            
-            );
+        resetPlayerPosition();
     }
 
     public void SetAllCollidersStatus(bool active){

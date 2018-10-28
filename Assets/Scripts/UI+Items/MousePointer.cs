@@ -7,7 +7,7 @@ public class MousePointer : MonoBehaviour {
     public List<InventoryButton> buttons;
     private GameObject player;
     public float maxRadius = 0.5f;
-    public GameObject cursor;
+    //public GameObject cursor;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +32,7 @@ public class MousePointer : MonoBehaviour {
             );
 
         worldPoint2 = Vector3.ClampMagnitude(worldPoint2, maxRadius);
-        cursor.transform.position = new Vector3(worldPoint.x, worldPoint.y, cursor.transform.position.z);
+        //cursor.transform.position = new Vector3(worldPoint.x, worldPoint.y, cursor.transform.position.z);
 
         //// C#
         //Vector3 v = worldPoint - player.transform.position;
