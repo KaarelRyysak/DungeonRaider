@@ -24,8 +24,7 @@ public class CharacterController : MonoBehaviour {
 
     private float timeSinceLastJump;
     private float timeBetweenJumps = 0.1f;
-
-    public float timeCompensationSpeed = 0.5f;
+    
 
 
     // Use this for initialization
