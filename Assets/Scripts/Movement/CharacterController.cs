@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour {
 
+    
+    //Conditions
+    private bool facingRight = true;
+    private bool isHit = false;
+
+    //Animations
+    Animator anim;
+
+    //Movement
     public float maxSpeed = 100;
 
-    private bool facingRight = true;
-    private Rigidbody2D rb2D;
-
-    Animator anim;
-    bool grounded = false;
-    public Transform groundCheck;
-    float groundRadius = 0.01f;
-    public LayerMask whatIsGround;
-
-    private TimeController timeController;
-
+    //jump
     public KeyCode jump;
     public KeyCode jumpAlt;
-
     public float JumpForce = 700f;
-
     private float timeSinceLastJump;
     private float timeBetweenJumps = 0.1f;
-    
+
+    //Ground comparison
+    public LayerMask whatIsGround;
+    float groundRadius = 0.01f;
+    bool grounded = false;
+    public Transform groundCheck;
+
+    //time effect
+    private TimeController timeController;
+    private PlayerDeathController PlayerDeathController;
+
+    //Other
+    private Rigidbody2D rb2D;
 
 
     // Use this for initialization
@@ -33,50 +42,65 @@ public class CharacterController : MonoBehaviour {
         anim = GetComponent<Animator>();
         timeSinceLastJump = Time.time;
         timeController = gameObject.GetComponent<TimeController>();
+        PlayerDeathController = gameObject.GetComponent<PlayerDeathController>();
 
     }
 	
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
-        
 
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        anim.SetBool("IsJumping", !grounded);
-
-        anim.SetFloat("Speed", rb2D.velocity.y);
-
-
-        float move = Input.GetAxis("Horizontal");
-
-
-        rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
-
-        anim.SetFloat("Speed", Mathf.Abs(move));
-
-        ////Change world time according to speed
-        //if (Mathf.Abs(move) > 0.4f)
-        //{
-        //    Time.timeScale = Mathf.Abs(move);
-        //}
-        //else
-        //{
-        //    Time.timeScale = 0.4f;
-        //}
-
-
-        if(move > 0 && !facingRight)
+        if (isHit == true)
         {
-            Flip();
+            if (facingRight == true)
+            { //paremale suunatud
+                deathMove(1);
+            }
+            else
+            { //vasakule suunatud
+                deathMove(-1);
+            }
         }
-        else if (move < 0 && facingRight)
-        {
-            Flip();
+        else {
+            grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+            anim.SetBool("IsJumping", !grounded);
+
+            anim.SetFloat("Speed", rb2D.velocity.y);
+
+
+            float move = Input.GetAxis("Horizontal");
+
+
+            rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
+
+            anim.SetFloat("Speed", Mathf.Abs(move));
+
+            ////Change world time according to speed
+            //if (Mathf.Abs(move) > 0.4f)
+            //{
+            //    Time.timeScale = Mathf.Abs(move);
+            //}
+            //else
+            //{
+            //    Time.timeScale = 0.4f;
+            //}
+
+
+            if (move > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (move < 0 && facingRight)
+            {
+                Flip();
+            }
         }
+
 	}
 
     private void Update()
     {
-        if (Time.time > timeBetweenJumps + timeSinceLastJump &&
+        if (isHit == false &&
+            Time.time > timeBetweenJumps + timeSinceLastJump &&
              grounded &&
              (Input.GetKeyDown(jump)||Input.GetKeyDown(jumpAlt)))
         {
@@ -93,4 +117,43 @@ public class CharacterController : MonoBehaviour {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    void deathMove(float direction) {
+        this.gameObject.transform.position = new Vector3(
+            transform.position.x-1f*Time.deltaTime*direction,
+            rb2D.velocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy") {
+            anim.SetBool("Hit", true);
+            anim.SetBool("IsJumping", false);
+            isHit = true;
+
+            SetAllCollidersStatus(false);
+            rb2D.AddForce(new Vector2(0, JumpForce));
+
+        }
+    }
+
+    private void OnBecameInvisible(){
+        anim.SetBool("Hit", false);
+        isHit = false;
+        SetAllCollidersStatus(true);
+
+        this.gameObject.transform.position = new Vector3(
+            -3.79f,
+            -1.69f,
+            0
+            
+            );
+    }
+
+    public void SetAllCollidersStatus(bool active){
+        foreach (Collider2D c in GetComponents<Collider2D>()){
+            c.enabled = active;
+        }
+    }
+
 }
