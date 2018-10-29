@@ -73,10 +73,10 @@ public class CharacterController : MonoBehaviour {
 
             float move = Input.GetAxis("Horizontal");
 
-            //if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) //Need to check, otherwise leftward force vectors in collisions don't work.
-            //{
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) //Need to check, otherwise leftward force vectors in collisions don't work.
+            {
                 rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
-            //}
+            }
 
             anim.SetFloat("Speed", Mathf.Abs(move));
 
@@ -145,18 +145,18 @@ public class CharacterController : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy")
         {
-            anim.SetBool("Hit", true);
-            isHit = true;
+            anim.SetBool("Hit", false);
+            isHit = false;
         }
     }
 
-    //private void OnBecameInvisible(){
-    //    anim.SetBool("Hit", false);
-    //    isHit = false;
-    //    SetAllCollidersStatus(true);
+    private void OnBecameInvisible(){
+        anim.SetBool("Hit", false);
+        isHit = false;
+        SetAllCollidersStatus(true);
 
-    //    resetPlayerPosition();
-    //}
+        resetPlayerPosition();
+    }
 
     public void SetAllCollidersStatus(bool active){
         foreach (Collider2D c in GetComponents<Collider2D>()){
