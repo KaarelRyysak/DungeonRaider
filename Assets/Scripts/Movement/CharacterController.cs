@@ -73,10 +73,10 @@ public class CharacterController : MonoBehaviour {
 
             float move = Input.GetAxis("Horizontal");
 
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) //Need to check, otherwise leftward force vectors in collisions don't work.
-            {
+            //if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) //Need to check, otherwise leftward force vectors in collisions don't work.
+            //{
                 rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
-            }
+            //}
 
             anim.SetFloat("Speed", Mathf.Abs(move));
 
@@ -136,7 +136,7 @@ public class CharacterController : MonoBehaviour {
             anim.SetBool("Hit", true);
             anim.SetBool("IsJumping", false);
             isHit = true;
-            //SetAllCollidersStatus(false);           
+            SetAllCollidersStatus(false);           
             rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
         }
     }
