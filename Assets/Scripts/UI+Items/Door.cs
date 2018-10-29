@@ -13,7 +13,7 @@ public class Door : MonoBehaviour {
         {
             if (nextLevel != null)
             {
-                SceneManager.LoadSceneAsync(nextLevel);
+                SceneManager.LoadScene(nextLevel);
             }
             else
             {
