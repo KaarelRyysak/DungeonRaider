@@ -1557,6 +1557,7 @@ MonoBehaviour:
   - {fileID: 1175044277}
   - {fileID: 1945717813}
   maxRadius: 0.5
+  cursor: {fileID: 1954947169}
 --- !u!4 &1957115956
 Transform:
   m_ObjectHideFlags: 0
