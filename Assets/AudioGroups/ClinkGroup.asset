@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720524295561bd44d91232d276d88994, type: 3}
+  m_Name: ClinkGroup
+  m_EditorClassIdentifier: 
+  VolumeMin: 0.18
+  VolumeMax: 0.05
+  PitchMin: 1
+  PitchMax: 0.59
+  Cooldown: 0.1
+  audioClips:
+  - {fileID: 8300000, guid: 1c9fa9713a0d3694ab5aa87dca49d6c8, type: 3}
+  - {fileID: 8300000, guid: a38da061d8a3d3d4b80081ddf2c073b8, type: 3}
