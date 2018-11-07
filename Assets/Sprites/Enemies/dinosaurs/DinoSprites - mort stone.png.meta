@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 6dc06eb3bc663804ab5847a94dbe6078
+guid: 3bd6c2d2753e9a5489676731281c634c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: DinoSprites - mort_0
-    21300002: DinoSprites - mort_1
-    21300004: DinoSprites - mort_2
-    21300006: DinoSprites - mort_3
-    21300008: DinoSprites - mort_4
-    21300010: DinoSprites - mort_5
-    21300012: DinoSprites - mort_6
-    21300014: DinoSprites - mort_7
-    21300016: DinoSprites - mort_8
-    21300018: DinoSprites - mort_9
-    21300020: DinoSprites - mort_10
-    21300022: DinoSprites - mort_11
-    21300024: DinoSprites - mort_12
-    21300026: DinoSprites - mort_13
-    21300028: DinoSprites - mort_14
-    21300030: DinoSprites - mort_15
-    21300032: DinoSprites - mort_16
-    21300034: DinoSprites - mort_17
-    21300036: DinoSprites - mort_18
-    21300038: DinoSprites - mort_19
-    21300040: DinoSprites - mort_20
-    21300042: DinoSprites - mort_21
-    21300044: DinoSprites - mort_22
-    21300046: DinoSprites - mort_23
+    21300000: DinoSprites - mort stone_0
+    21300002: DinoSprites - mort stone_1
+    21300004: DinoSprites - mort stone_2
+    21300006: DinoSprites - mort stone_3
+    21300008: DinoSprites - mort stone_4
+    21300010: DinoSprites - mort stone_5
+    21300012: DinoSprites - mort stone_6
+    21300014: DinoSprites - mort stone_7
+    21300016: DinoSprites - mort stone_8
+    21300018: DinoSprites - mort stone_9
+    21300020: DinoSprites - mort stone_10
+    21300022: DinoSprites - mort stone_11
+    21300024: DinoSprites - mort stone_12
+    21300026: DinoSprites - mort stone_13
+    21300028: DinoSprites - mort stone_14
+    21300030: DinoSprites - mort stone_15
+    21300032: DinoSprites - mort stone_16
+    21300034: DinoSprites - mort stone_17
+    21300036: DinoSprites - mort stone_18
+    21300038: DinoSprites - mort stone_19
+    21300040: DinoSprites - mort stone_20
+    21300042: DinoSprites - mort stone_21
+    21300044: DinoSprites - mort stone_22
+    21300046: DinoSprites - mort stone_23
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DinoSprites - mort_0
+      name: DinoSprites - mort stone_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,19 +127,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad22ee9457f168042a8046a1cab947d4
+      spriteID: b756b0c8f96f3154c8f452202c11436c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_1
+      name: DinoSprites - mort stone_1
       rect:
         serializedVersion: 2
         x: 24
@@ -147,19 +147,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93c4c96494dddde4e9edc75cacea247a
+      spriteID: 7aee7e548aa10c74b94163222b342c2d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_2
+      name: DinoSprites - mort stone_2
       rect:
         serializedVersion: 2
         x: 48
@@ -167,19 +167,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6f5a707734dd5540af914381692fa38
+      spriteID: a6efa5cec3e1aed4e8fbe51b5da15183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_3
+      name: DinoSprites - mort stone_3
       rect:
         serializedVersion: 2
         x: 72
@@ -187,19 +187,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8abb1669404601f41956102a804b22d1
+      spriteID: 2b8afdb2521b6a1449d1f4f008e58675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_4
+      name: DinoSprites - mort stone_4
       rect:
         serializedVersion: 2
         x: 96
@@ -207,19 +207,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d480781d788e04ebeaa37e54391e4b
+      spriteID: 644d4ebe06f4e534fb7ff428851585fd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_5
+      name: DinoSprites - mort stone_5
       rect:
         serializedVersion: 2
         x: 120
@@ -227,19 +227,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6be5438c309c34f499d2b6e333485435
+      spriteID: 365148f24ff6f5e4ab80ff855abf139f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_6
+      name: DinoSprites - mort stone_6
       rect:
         serializedVersion: 2
         x: 144
@@ -247,19 +247,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e6e13e3be386b949916d8de96f8cbd2
+      spriteID: c071413ac2ecdaf45a7e7289b11244c5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_7
+      name: DinoSprites - mort stone_7
       rect:
         serializedVersion: 2
         x: 168
@@ -267,19 +267,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81723986ecd26d4ebd449496cb13126
+      spriteID: 6dc675905c69d8a4a895f4a881d7cedf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_8
+      name: DinoSprites - mort stone_8
       rect:
         serializedVersion: 2
         x: 192
@@ -287,19 +287,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8912f655145a043b80a3bb37035a9b
+      spriteID: e2caa4714baf26e48b57ca4bd10e1604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_9
+      name: DinoSprites - mort stone_9
       rect:
         serializedVersion: 2
         x: 216
@@ -307,19 +307,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 428a0128b063e754b9ae46c0f2617c30
+      spriteID: 55bb21f67db41ff4b9fbb3870bd55db1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_10
+      name: DinoSprites - mort stone_10
       rect:
         serializedVersion: 2
         x: 240
@@ -327,19 +327,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042b6381ff3b53d4c9e8937a7e1538eb
+      spriteID: e8677b8ea0674f441b485c7d226cf4cc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_11
+      name: DinoSprites - mort stone_11
       rect:
         serializedVersion: 2
         x: 264
@@ -347,19 +347,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a839f449724d79b4aa262c9aabf88b47
+      spriteID: 1605eb7a50904634faeb2bbf97fae780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_12
+      name: DinoSprites - mort stone_12
       rect:
         serializedVersion: 2
         x: 288
@@ -367,19 +367,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c214f424c8dbe44a9527a08db7e898c
+      spriteID: a30310b76597e7048ba4faf690a50835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_13
+      name: DinoSprites - mort stone_13
       rect:
         serializedVersion: 2
         x: 312
@@ -387,19 +387,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83220b08a7e60b94eac9da4857459d42
+      spriteID: 4d90a6cdc3c186446a31cebe3316264d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_14
+      name: DinoSprites - mort stone_14
       rect:
         serializedVersion: 2
         x: 336
@@ -407,19 +407,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 424b8f12d5ff44c4396aa7fda6ce9c13
+      spriteID: d4bb0888a7896d04bb6733e257612d82
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_15
+      name: DinoSprites - mort stone_15
       rect:
         serializedVersion: 2
         x: 360
@@ -427,19 +427,19 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f8e5505b76475542acde7cb34723264
+      spriteID: 301349625686b104aaaed81235fc3730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_16
+      name: DinoSprites - mort stone_16
       rect:
         serializedVersion: 2
         x: 384
@@ -447,153 +447,153 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9617c4bccc061c54c975c7dae0d53bac
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DinoSprites - mort_17
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 0
-        width: 18
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e14fceeb588d2d48b2728faa16b2feb
+      spriteID: 581ebbe6aa2fbe347b67d606fcaeddc8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_18
+      name: DinoSprites - mort stone_17
       rect:
         serializedVersion: 2
-        x: 438
+        x: 408
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9f9826622416fc42ace48753e1b041a
+      spriteID: bcff173e35ad35148b48c89420fa17e0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_19
+      name: DinoSprites - mort stone_18
       rect:
         serializedVersion: 2
-        x: 462
+        x: 432
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 718d32559a346e7449f32b41575c1871
+      spriteID: 8dcf438281fa8b24d9ac1e8980377fa7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_20
+      name: DinoSprites - mort stone_19
       rect:
         serializedVersion: 2
-        x: 486
+        x: 456
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed3544e664b7c9a4e980d80afc1d8a31
+      spriteID: ddd5249790d7c934cbc1a179326e5994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_21
+      name: DinoSprites - mort stone_20
       rect:
         serializedVersion: 2
-        x: 510
+        x: 480
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0628fe479dd9f846939a5563dfc0c4e
+      spriteID: a4eabd4bbd0821f4e9fd4f10632fe5c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_22
+      name: DinoSprites - mort stone_21
       rect:
         serializedVersion: 2
-        x: 534
+        x: 504
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f924c35b2792d4b4893d41dc691124c3
+      spriteID: 366daa23554281845abf5293ed38f3f1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - mort_23
+      name: DinoSprites - mort stone_22
       rect:
         serializedVersion: 2
-        x: 558
+        x: 528
         y: 0
-        width: 18
+        width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e75d50750609c78468cf20154af127c8
+      spriteID: 4b8c944104ca3d4468da2812475f1ba2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DinoSprites - mort stone_23
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ae2bfbf4436644d88f917f4d17d595
       vertices: []
       indices: 
       edges: []
@@ -601,7 +601,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3877af64ee195374eaafafb8f1492ea7
+    spriteID: 660167099d4938f48a165768064d8709
     vertices: []
     indices: 
     edges: []

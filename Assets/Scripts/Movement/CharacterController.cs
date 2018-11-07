@@ -130,7 +130,7 @@ public class CharacterController : MonoBehaviour {
             rb2D.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy") {
             anim.SetBool("Hit", true);
@@ -141,7 +141,7 @@ public class CharacterController : MonoBehaviour {
         }
     }
 
-    private void OnCollisionExit2D(Collision2D col)
+    private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy")
         {
