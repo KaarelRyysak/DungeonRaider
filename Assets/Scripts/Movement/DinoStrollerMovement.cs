@@ -47,7 +47,7 @@ public class DinoStrollerMovement : MonoBehaviour {
         float currentTime = Time.time;
 
         //stop walking
-        if (isWalking == true && Vector3.Distance(transform.position, currentWaypoint.transform.position) <= 0.05f)
+        if (isWalking == true && Vector3.Distance(transform.position, currentWaypoint.transform.position) <= 0.05f) //Vahetada epsiloni vastu?
         {
             isWalking = false;
             animator.SetBool("IsWalking", false);
@@ -115,4 +115,6 @@ public class DinoStrollerMovement : MonoBehaviour {
             rightWaypoint.transform.localPosition.y,
             rightWaypoint.transform.localPosition.z);
     }
+    
+
 }
