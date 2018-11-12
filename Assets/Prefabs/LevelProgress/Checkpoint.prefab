@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4214407568875132}
   - component: {fileID: 212470838140918874}
   - component: {fileID: 95378304486763122}
-  - component: {fileID: 114929813959315154}
   - component: {fileID: 58894088225350590}
   m_Layer: 0
   m_Name: Checkpoint
@@ -76,18 +75,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114929813959315154
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425807132312214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81904e5a828f674e99f340ec901740c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextLevel: Scene2
 --- !u!212 &212470838140918874
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -29,7 +29,7 @@ TextureImporter:
     21300048: GrayGrassGround
     21300050: GrayGrassGround2
     21300052: GrayGrassRound3
-    21300054: environment-tiles_27
+    21300054: Ladder
     21300056: BCeilingWebLeft3
     21300058: BCeilingDown2
     21300060: BCeilingWebRight3
@@ -46,7 +46,7 @@ TextureImporter:
     21300082: GrayBridge1
     21300084: GrayLarge1
     21300086: GrayLarge2
-    21300088: environment-tiles_44
+    21300088: BCeiling5
     21300090: environment-tiles_45
     21300092: Large5
     21300094: Large6
@@ -89,8 +89,8 @@ TextureImporter:
     21300168: environment-tiles_84
     21300170: environment-tiles_85
     21300172: environment-tiles_86
-    21300174: environment-tiles_87
-    21300176: environment-tiles_88
+    21300174: Pillar21
+    21300176: Pillar11
     21300178: environment-tiles_89
     21300180: environment-tiles_90
     21300182: GraySquareLargeLava3
@@ -98,8 +98,8 @@ TextureImporter:
     21300186: GraySquareLarge3
     21300188: GraySquareLarge4
     21300190: GrayLargeNarrow2
-    21300192: environment-tiles_96
-    21300194: environment-tiles_97
+    21300192: Pillar22
+    21300194: Pillar12
     21300196: environment-tiles_98
     21300198: environment-tiles_99
     21300200: environment-tiles_100
@@ -113,8 +113,8 @@ TextureImporter:
     21300216: environment-tiles_108
     21300218: environment-tiles_109
     21300220: environment-tiles_110
-    21300222: environment-tiles_111
-    21300224: environment-tiles_112
+    21300222: Pillar23
+    21300224: Pillar13
     21300226: environment-tiles_113
     21300228: environment-tiles_114
     21300230: environment-tiles_115
@@ -130,8 +130,8 @@ TextureImporter:
     21300250: environment-tiles_125
     21300252: environment-tiles_126
     21300254: environment-tiles_127
-    21300256: environment-tiles_128
-    21300258: environment-tiles_129
+    21300256: Pillar24
+    21300258: Pillar14
     21300260: environment-tiles_130
     21300262: BG
     21300264: GrayLargeFol3
@@ -213,7 +213,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 31
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -803,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_27
+      name: Ladder
       rect:
         serializedVersion: 2
         x: 416
@@ -1143,7 +1143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_44
+      name: BCeiling5
       rect:
         serializedVersion: 2
         x: 560
@@ -2003,7 +2003,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_87
+      name: Pillar21
       rect:
         serializedVersion: 2
         x: 528
@@ -2023,7 +2023,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_88
+      name: Pillar11
       rect:
         serializedVersion: 2
         x: 560
@@ -2183,7 +2183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_96
+      name: Pillar22
       rect:
         serializedVersion: 2
         x: 528
@@ -2203,7 +2203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_97
+      name: Pillar12
       rect:
         serializedVersion: 2
         x: 560
@@ -2483,7 +2483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_111
+      name: Pillar23
       rect:
         serializedVersion: 2
         x: 528
@@ -2503,7 +2503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_112
+      name: Pillar13
       rect:
         serializedVersion: 2
         x: 560
@@ -2823,7 +2823,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_128
+      name: Pillar24
       rect:
         serializedVersion: 2
         x: 528
@@ -2843,7 +2843,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_129
+      name: Pillar14
       rect:
         serializedVersion: 2
         x: 560
@@ -3326,7 +3326,7 @@ TextureImporter:
       name: Wide3
       rect:
         serializedVersion: 2
-        x: 79
+        x: 80
         y: 32
         width: 16
         height: 16
