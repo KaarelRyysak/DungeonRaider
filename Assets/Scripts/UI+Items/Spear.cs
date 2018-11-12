@@ -8,6 +8,8 @@ public class Spear : MonoBehaviour {
 
 	void Start () {
         rgbd2D = GetComponent<Rigidbody2D>();
+        //rgbd2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+
         rgbd2D.AddForce(new Vector2(30,0), ForceMode2D.Impulse);
     }
 
@@ -24,18 +26,40 @@ public class Spear : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy") //et ei takistaks vastaste liikumist
         {
+            if (!stuck)
+            {
+                //TODO: murderize enemy
+            }
+            
+            //TODO: Remove this line after implementing instantiating
             Physics2D.IgnoreCollision(collision.collider, GetComponent<PolygonCollider2D>());
+
             return;
         }
+
+        //TODO: replace this line with instantiating an identical spear that
+        //can be picked up and doesn't have a rigidbody
+        //(look at usableSpear script)
         rgbd2D.Sleep();
+
+        //TODO: replace this line with destroying gameobject
         stuck = true;
     }
 
-    private Vector2 ZRotToForceDir(float zCoord) //Oda "otse" suund tuleb korrektse tõuke andmiseks (addforce) tõenäoliselt arvutada oda pöördest z-telje ümber.
+    //Mees, ma saan aru, mida sa üritad teha, 
+    //aga proovime ehk teist süsteemi. -Kaarel
+    //private Vector2 ZRotToForceDir(float zCoord) //Oda "otse" suund tuleb korrektse tõuke andmiseks (addforce) tõenäoliselt arvutada oda pöördest z-telje ümber.
+    //{
+
+
+    //    return new Vector2(0, 0);
+    //}
+
+
+        //Annab tõuke targetPos suunas.
+    public void throwSpear(Vector3 targetPos)
     {
-
-
-        return new Vector2(0, 0);
+        //TODO: Write the actual code
     }
 
 }
