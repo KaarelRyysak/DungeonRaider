@@ -105,7 +105,7 @@ public class CharacterController : MonoBehaviour {
             grounded &&
             (Input.GetKeyDown(jump)||Input.GetKeyDown(jumpAlt)))
         {
-            anim.SetBool("IsJumping", true);
+            //anim.SetBool("IsJumping", true);
             rb2D.AddForce(new Vector2(0, JumpForce));
         }
         
