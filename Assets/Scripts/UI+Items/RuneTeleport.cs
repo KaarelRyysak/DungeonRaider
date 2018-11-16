@@ -80,6 +80,12 @@ public class RuneTeleport : MonoBehaviour, Consumable {
     {
     }
 
+    //This is what happens when the user starts aiming the item
+    public void Aim()
+    {
+    }
+
+
     public void PickUp()
     {
         pickedUp = true;

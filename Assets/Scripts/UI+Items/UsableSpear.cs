@@ -86,6 +86,11 @@ public class UsableSpear : MonoBehaviour, Consumable {
         //Then destroy this spear, so it's replaced
     }
 
+    public void Aim()
+    {
+
+    }
+
     public void PickUp()
     {
         pickedUp = true;
