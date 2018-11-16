@@ -10,6 +10,7 @@ public class Spear : MonoBehaviour {
 
 	void Awake () {
         rgbd2D = GetComponent<Rigidbody2D>();
+        rgbd2D.interpolation = RigidbodyInterpolation2D.Interpolate;
         //Vector3 UpVector = this.transform.up;
         //Vector3 ForwardVector = Quaternion.AngleAxis(45, Vector3.up) * UpVector;
         //rgbd2D.AddForce(ForwardVector * ForwardForce, ForceMode2D.Impulse);
