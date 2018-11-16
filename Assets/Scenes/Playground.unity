@@ -3771,11 +3771,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.4032856
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.3531904
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3783,19 +3783,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.78594863
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6182918
       objectReference: {fileID: 0}
     - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
       propertyPath: m_RootOrder
@@ -3810,6 +3810,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 01112a4308d4f5f4781d94e92d92f778, type: 2}
+    - target: {fileID: 4614024091366324, guid: 893dafa04056070418907047b4752327, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 103.617004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893dafa04056070418907047b4752327, type: 2}
   m_IsPrefabAsset: 0
