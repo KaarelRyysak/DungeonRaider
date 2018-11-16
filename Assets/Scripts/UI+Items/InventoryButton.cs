@@ -25,11 +25,16 @@ public class InventoryButton : MonoBehaviour {
             //If there is an item on the button
             if (stored != null)
             {
+                if (Input.GetKeyDown(keyCode))
+                {
+                    //displaying item aiming stuff
+                    stored.Aim();
+                }
                 if (Input.GetKeyUp(keyCode))
                 {
                     //Using the item
                     stored.Use();
-                    //make sprite invisible
+                    //make sprite on button invisible
                     storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
                     storedImage.sprite = null;
                     stored = null;
