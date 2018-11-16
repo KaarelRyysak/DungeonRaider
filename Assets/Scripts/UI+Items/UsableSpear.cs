@@ -24,6 +24,10 @@ public class UsableSpear : MonoBehaviour, Consumable {
     // Use this for initialization
     void Start()
     {
+        InventoryButton[] buttons = GameObject.FindObjectsOfType<InventoryButton>(); //TODO: optimize this process or rework it so we don't use arrays, change in other item scripts as well
+        lmb = buttons[0];
+        rmb = buttons[1];
+
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         //Finds the gameobject called "Player" and assigns it
@@ -101,4 +105,8 @@ public class UsableSpear : MonoBehaviour, Consumable {
     {
         highlighted = false;
     }
+
+
+
+
 }

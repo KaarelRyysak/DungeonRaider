@@ -98,7 +98,7 @@ public class CharacterController : MonoBehaviour {
 
 	}
 
-    private void Update()
+    void Update()
     {
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
@@ -109,6 +109,7 @@ public class CharacterController : MonoBehaviour {
             rb2D.AddForce(new Vector2(0, JumpForce));
         }
         
+
     }
 
     void Flip()
