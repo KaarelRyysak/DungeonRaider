@@ -24,6 +24,10 @@ public class Spear : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        PolygonCollider2D[] PolygonColliders = this.GetComponents<PolygonCollider2D>();
+        PolygonCollider2D Collider = (PolygonCollider2D) collision.otherCollider; //Võib lisada try catch ploki
+        int PointCount = Collider.points.Length;
+
         if (collision.gameObject.tag == "Enemy") //et ei takistaks vastaste liikumist
         {
             if (!stuck)
@@ -33,10 +37,15 @@ public class Spear : MonoBehaviour {
 
             return;
         }
+        if (PointCount == 3) // TABATI ODA TIPPU
+        {
+            replaceSpear();
+        }
+        else // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
+        {
+            Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
+        }
 
-        this.gameObject.SetActive(false);
-        spawnUISpear();
-        GameObject.Destroy(this);
 
 
         //TODO: replace this line with destroying gameobject
@@ -52,6 +61,13 @@ public class Spear : MonoBehaviour {
     private void spawnUISpear()
     {
         GameObject.Instantiate(Resources.Load<UsableSpear>("Prefabs/UsableSpear"), this.transform.position, this.transform.rotation);
+    }
+
+    private void replaceSpear()
+    {
+        this.gameObject.SetActive(false);
+        spawnUISpear();
+        GameObject.Destroy(this);
     }
 
 
