@@ -73,7 +73,9 @@ public class CharacterController : MonoBehaviour {
 
             float move = Input.GetAxis("Horizontal");
             rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
+
             anim.SetFloat("Speed", Mathf.Abs(move));
+            anim.SetFloat("HeightSpeed", rb2D.velocity.y);
 
             ////Change world time according to speed
             //if (Mathf.Abs(move) > 0.4f)
