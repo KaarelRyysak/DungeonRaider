@@ -10,6 +10,7 @@ TagManager:
   - RightPoint
   - Enemy
   - Spear
+  - RC
   layers:
   - Default
   - TransparentFX

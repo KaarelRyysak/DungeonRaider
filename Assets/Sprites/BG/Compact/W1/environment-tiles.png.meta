@@ -11,8 +11,8 @@ TextureImporter:
     21300012: BCeilingConnect
     21300014: BCeiling3
     21300016: BCeiling4
-    21300018: environment-tiles_9
-    21300020: environment-tiles_10
+    21300018: 4Cei1
+    21300020: 5Spikeup
     21300022: environment-tiles_11
     21300024: Totem3
     21300026: Totem4
@@ -24,7 +24,7 @@ TextureImporter:
     21300038: BCeilingDown1
     21300040: BCeilingWebRight1
     21300042: BCeilingWebRight2
-    21300044: environment-tiles_22
+    21300044: 4Cei2
     21300046: environment-tiles_23
     21300048: GrayGrassGround
     21300050: GrayGrassGround2
@@ -33,8 +33,8 @@ TextureImporter:
     21300056: BCeilingWebLeft3
     21300058: BCeilingDown2
     21300060: BCeilingWebRight3
-    21300062: environment-tiles_31
-    21300064: environment-tiles_32
+    21300062: 5Spikedown1
+    21300064: 5SpikeDown2
     21300066: environment-tiles_33
     21300068: Large1
     21300070: Large2
@@ -56,24 +56,24 @@ TextureImporter:
     21300102: GrayLargeLava4
     21300104: GrayLarge3
     21300106: GrayLarge4
-    21300108: environment-tiles_54
+    21300108: 1Fol
     21300110: environment-tiles_55
     21300112: environment-tiles_56
     21300114: environment-tiles_57
     21300116: environment-tiles_58
-    21300118: environment-tiles_59
-    21300120: environment-tiles_60
-    21300122: environment-tiles_61
-    21300124: environment-tiles_62
+    21300118: 6CeilFol
+    21300120: 7-3
+    21300122: 7-1
+    21300124: 7-2
     21300126: environment-tiles_63
     21300128: Large9
     21300130: Large10
     21300132: Large11
     21300134: Large12
-    21300136: environment-tiles_68
-    21300138: environment-tiles_69
-    21300140: environment-tiles_70
-    21300142: environment-tiles_71
+    21300136: 2Fol2
+    21300138: 2Fol3
+    21300140: 3FolGround
+    21300142: 7-4
     21300144: environment-tiles_72
     21300146: Large13
     21300148: Large14
@@ -84,14 +84,14 @@ TextureImporter:
     21300158: GraySquareLarge1
     21300160: GraySquareLarge2
     21300162: GrayLargeNarrow1
-    21300164: environment-tiles_82
-    21300166: environment-tiles_83
-    21300168: environment-tiles_84
-    21300170: environment-tiles_85
-    21300172: environment-tiles_86
+    21300164: 2CeilFol
+    21300166: 2Fol4
+    21300168: 2Fol5
+    21300170: 8-13
+    21300172: 8-14
     21300174: Pillar21
     21300176: Pillar11
-    21300178: environment-tiles_89
+    21300178: 7-9
     21300180: environment-tiles_90
     21300182: GraySquareLargeLava3
     21300184: GraySquareLargeLava4
@@ -100,24 +100,24 @@ TextureImporter:
     21300190: GrayLargeNarrow2
     21300192: Pillar22
     21300194: Pillar12
-    21300196: environment-tiles_98
-    21300198: environment-tiles_99
-    21300200: environment-tiles_100
+    21300196: 7-10
+    21300198: 7-5
+    21300200: 7-6
     21300202: environment-tiles_101
     21300204: NCeiling1
     21300206: NCeiling2
     21300208: NCeiling3
     21300210: NCeiling4
-    21300212: environment-tiles_106
-    21300214: environment-tiles_107
-    21300216: environment-tiles_108
-    21300218: environment-tiles_109
-    21300220: environment-tiles_110
+    21300212: 8-1
+    21300214: 8-2
+    21300216: 8-15
+    21300218: 8-9
+    21300220: 8-10
     21300222: Pillar23
     21300224: Pillar13
-    21300226: environment-tiles_113
-    21300228: environment-tiles_114
-    21300230: environment-tiles_115
+    21300226: 7-11
+    21300228: 7-7
+    21300230: 7-8
     21300232: environment-tiles_116
     21300234: environment-tiles_117
     21300236: GrayLava
@@ -125,11 +125,11 @@ TextureImporter:
     21300240: GrayUp
     21300242: GrayLargeFol1
     21300244: GrayLargeFol2
-    21300246: environment-tiles_123
-    21300248: environment-tiles_124
-    21300250: environment-tiles_125
-    21300252: environment-tiles_126
-    21300254: environment-tiles_127
+    21300246: 8-3
+    21300248: 8-4
+    21300250: 8-16
+    21300252: 8-11
+    21300254: 8-12
     21300256: Pillar24
     21300258: Pillar14
     21300260: environment-tiles_130
@@ -146,8 +146,8 @@ TextureImporter:
     21300282: GrayCrack
     21300284: environment-tiles_142
     21300286: environment-tiles_143
-    21300288: environment-tiles_144
-    21300290: environment-tiles_145
+    21300288: 8-5
+    21300290: 8-6
     21300292: environment-tiles_146
     21300294: environment-tiles_147
     21300296: environment-tiles_148
@@ -157,8 +157,8 @@ TextureImporter:
     21300304: Wide2
     21300306: Wide3
     21300308: Wide4
-    21300310: environment-tiles_155
-    21300312: environment-tiles_156
+    21300310: 8-7
+    21300312: 8-8
     21300314: BlueGroundFol1
     21300316: BlueGroundFol2
     21300318: BlueGroundFol3
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_9
+      name: 4Cei1
       rect:
         serializedVersion: 2
         x: 560
@@ -463,7 +463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_10
+      name: 5Spikeup
       rect:
         serializedVersion: 2
         x: 608
@@ -703,7 +703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_22
+      name: 4Cei2
       rect:
         serializedVersion: 2
         x: 560
@@ -883,7 +883,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_31
+      name: 5Spikedown1
       rect:
         serializedVersion: 2
         x: 608
@@ -903,7 +903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_32
+      name: 5SpikeDown2
       rect:
         serializedVersion: 2
         x: 640
@@ -1343,7 +1343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_54
+      name: 1Fol
       rect:
         serializedVersion: 2
         x: 320
@@ -1443,7 +1443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_59
+      name: 6CeilFol
       rect:
         serializedVersion: 2
         x: 560
@@ -1463,7 +1463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_60
+      name: 7-3
       rect:
         serializedVersion: 2
         x: 592
@@ -1483,7 +1483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_61
+      name: 7-1
       rect:
         serializedVersion: 2
         x: 624
@@ -1503,7 +1503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_62
+      name: 7-2
       rect:
         serializedVersion: 2
         x: 640
@@ -1623,7 +1623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_68
+      name: 2Fol2
       rect:
         serializedVersion: 2
         x: 352
@@ -1643,7 +1643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_69
+      name: 2Fol3
       rect:
         serializedVersion: 2
         x: 368
@@ -1663,7 +1663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_70
+      name: 3FolGround
       rect:
         serializedVersion: 2
         x: 400
@@ -1683,7 +1683,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_71
+      name: 7-4
       rect:
         serializedVersion: 2
         x: 640
@@ -1903,7 +1903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_82
+      name: 2CeilFol
       rect:
         serializedVersion: 2
         x: 320
@@ -1923,7 +1923,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_83
+      name: 2Fol4
       rect:
         serializedVersion: 2
         x: 352
@@ -1943,7 +1943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_84
+      name: 2Fol5
       rect:
         serializedVersion: 2
         x: 368
@@ -1963,7 +1963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_85
+      name: 8-13
       rect:
         serializedVersion: 2
         x: 480
@@ -1983,7 +1983,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_86
+      name: 8-14
       rect:
         serializedVersion: 2
         x: 496
@@ -2043,7 +2043,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_89
+      name: 7-9
       rect:
         serializedVersion: 2
         x: 592
@@ -2223,7 +2223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_98
+      name: 7-10
       rect:
         serializedVersion: 2
         x: 592
@@ -2243,7 +2243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_99
+      name: 7-5
       rect:
         serializedVersion: 2
         x: 624
@@ -2263,7 +2263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_100
+      name: 7-6
       rect:
         serializedVersion: 2
         x: 640
@@ -2383,7 +2383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_106
+      name: 8-1
       rect:
         serializedVersion: 2
         x: 384
@@ -2403,7 +2403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_107
+      name: 8-2
       rect:
         serializedVersion: 2
         x: 400
@@ -2423,7 +2423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_108
+      name: 8-15
       rect:
         serializedVersion: 2
         x: 432
@@ -2443,7 +2443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_109
+      name: 8-9
       rect:
         serializedVersion: 2
         x: 480
@@ -2463,7 +2463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_110
+      name: 8-10
       rect:
         serializedVersion: 2
         x: 496
@@ -2523,7 +2523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_113
+      name: 7-11
       rect:
         serializedVersion: 2
         x: 592
@@ -2543,7 +2543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_114
+      name: 7-7
       rect:
         serializedVersion: 2
         x: 624
@@ -2563,7 +2563,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_115
+      name: 7-8
       rect:
         serializedVersion: 2
         x: 640
@@ -2723,7 +2723,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_123
+      name: 8-3
       rect:
         serializedVersion: 2
         x: 384
@@ -2743,7 +2743,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_124
+      name: 8-4
       rect:
         serializedVersion: 2
         x: 400
@@ -2763,7 +2763,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_125
+      name: 8-16
       rect:
         serializedVersion: 2
         x: 432
@@ -2783,7 +2783,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_126
+      name: 8-11
       rect:
         serializedVersion: 2
         x: 480
@@ -2803,7 +2803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_127
+      name: 8-12
       rect:
         serializedVersion: 2
         x: 496
@@ -3143,7 +3143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_144
+      name: 8-5
       rect:
         serializedVersion: 2
         x: 448
@@ -3163,7 +3163,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_145
+      name: 8-6
       rect:
         serializedVersion: 2
         x: 464
@@ -3363,7 +3363,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_155
+      name: 8-7
       rect:
         serializedVersion: 2
         x: 448
@@ -3383,7 +3383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: environment-tiles_156
+      name: 8-8
       rect:
         serializedVersion: 2
         x: 464

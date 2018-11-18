@@ -6,7 +6,7 @@ public class CharacterController : MonoBehaviour {
 
     //Conditions
     private bool facingRight = true;
-    private bool isHit = false;
+    public bool isHit = false;
 
     //Animations
     Animator anim;
@@ -43,6 +43,7 @@ public class CharacterController : MonoBehaviour {
         timeController = GetComponent<TimeController>();
         PlayerDeathController = GetComponent<PlayerDeathController>();
         initialTransformPosition = this.transform.position;
+        isHit = false;
     }
 	
     void resetPlayerPosition()
@@ -50,6 +51,12 @@ public class CharacterController : MonoBehaviour {
         rb2D.velocity = Vector3.zero;
         this.transform.position = initialTransformPosition;
     }
+
+    public void setPlayerPosition(Transform newPos)
+    {
+        initialTransformPosition = newPos.position;
+    }
+
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
 
