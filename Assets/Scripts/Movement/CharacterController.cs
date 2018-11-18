@@ -100,7 +100,7 @@ public class CharacterController : MonoBehaviour {
 
 	}
 
-    private void Update()
+    void Update()
     {
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
@@ -111,6 +111,10 @@ public class CharacterController : MonoBehaviour {
             rb2D.AddForce(new Vector2(0, JumpForce));
         }
         
+        if (Input.GetMouseButtonDown(0)) //throw spear
+        {
+            SpawnSpear();
+        }
     }
 
     void Flip()
@@ -160,6 +164,12 @@ public class CharacterController : MonoBehaviour {
         foreach (Collider2D c in GetComponents<Collider2D>()){
             c.enabled = active;
         }
+    }
+
+    private void SpawnSpear()
+    {
+        Spear spear = GameObject.Instantiate(Resources.Load<Spear>("Prefabs/Spear"), this.transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
+        spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
 }
