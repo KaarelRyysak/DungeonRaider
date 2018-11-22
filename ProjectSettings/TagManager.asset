@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Spear
   - RC
+  - UISpear
+  - WalkableTerrain
   layers:
   - Default
   - TransparentFX

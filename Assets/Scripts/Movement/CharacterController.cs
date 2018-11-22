@@ -72,7 +72,7 @@ public class CharacterController : MonoBehaviour {
             }
         }
         else {
-            grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+            //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
             anim.SetBool("IsJumping", !grounded);
 
             anim.SetFloat("Speed", rb2D.velocity.y);
@@ -178,5 +178,14 @@ public class CharacterController : MonoBehaviour {
         Spear spear = GameObject.Instantiate(Resources.Load<Spear>("Prefabs/Spear"), this.transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
         spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain")
+        {
+            grounded = true;
+        }
+    }
+
 
 }
