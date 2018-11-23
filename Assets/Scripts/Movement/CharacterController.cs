@@ -179,13 +179,7 @@ public class CharacterController : MonoBehaviour {
         spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain")
-        {
-            grounded = true;
-        }
-    }
-
+    private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
+    private void  OnCollisionExit2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = false; }
 
 }
