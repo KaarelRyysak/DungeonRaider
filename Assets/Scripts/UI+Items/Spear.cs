@@ -8,6 +8,7 @@ public class Spear : MonoBehaviour {
     bool stuck;
     private Vector3 Zero = Vector3.zero;
     public int ForwardForce = 50;
+    bool touchedTip = false;
 
 	void Awake () {
         rgbd2D = GetComponent<Rigidbody2D>();
@@ -24,53 +25,55 @@ public class Spear : MonoBehaviour {
          }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // TABATI ODA TIPPU
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Quaternion deadRotation = Quaternion.Euler(0, 0, 90);
+            Vector3 deadShift = new Vector3(0, 0.3f, 0);
+
+            // To deal with the (number) stuff when cloning prefabs
+            Regex dinostroller = new Regex("DinoStroller.*");
+            Regex dinorunner = new Regex("DinoRunner.*");
+            Regex dinostatue = new Regex("DinoStatue.*");
+            Regex dinowalker = new Regex("DinoWalker.*");
+
+            //Tuvastada vastase tüüp
+            if (dinostroller.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoStroller"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+            else if (dinorunner.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoRunner"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+            else if (dinostatue.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoStatue"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+            else if (dinowalker.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoWalker"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+
+            GameObject.Destroy(collision.gameObject);
+        }
+
+        touchedTip = true;
+        //replaceSpear();
+        
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PolygonCollider2D[] PolygonColliders = this.GetComponents<PolygonCollider2D>();
-        PolygonCollider2D Collider = (PolygonCollider2D) collision.otherCollider; //Võib lisada try catch ploki
-        int PointCount = Collider.points.Length;
+        // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
 
-        if (PointCount == 3) // TABATI ODA TIPPU
+        if (collision.gameObject.tag == "Enemy") return;
+        if (touchedTip) replaceSpear();
+        else
         {
-            if (collision.gameObject.tag == "Enemy")
-            {
-                Quaternion deadRotation = Quaternion.Euler(0, 0, 90);
-                Vector3 deadShift = new Vector3(0, 0.3f, 0);
-
-                // To deal with the (number) stuff when cloning prefabs
-                Regex dinostroller = new Regex("DinoStroller.*");
-                Regex dinorunner = new Regex("DinoRunner.*");
-                Regex dinostatue = new Regex("DinoStatue.*");
-                Regex dinowalker = new Regex("DinoWalker.*");
-
-                //Tuvastada vastase tüüp
-                if (dinostroller.IsMatch(collision.gameObject.name))
-                {
-                    GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoStroller"), collision.gameObject.transform.position - deadShift, deadRotation);
-                }
-                else if (dinorunner.IsMatch(collision.gameObject.name))
-                {
-                    GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoRunner"), collision.gameObject.transform.position - deadShift, deadRotation);
-                }
-                else if (dinostatue.IsMatch(collision.gameObject.name))
-                {
-                    GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoStatue"), collision.gameObject.transform.position - deadShift, deadRotation);
-                }
-                else if (dinowalker.IsMatch(collision.gameObject.name))
-                {
-                    GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoWalker"), collision.gameObject.transform.position - deadShift, deadRotation);
-                }
-
-                GameObject.Destroy(collision.gameObject);
-            }
-            else
-            {
-                replaceSpear();
-            }
-        }
-        else // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
-        {
-            if (collision.gameObject.tag == "Enemy") return;
             Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
         }
     }
