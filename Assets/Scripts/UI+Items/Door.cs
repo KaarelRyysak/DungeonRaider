@@ -11,12 +11,13 @@ public class Door : MonoBehaviour {
     {
         if (target.gameObject.name == "Player")
         {
-            if (nextLevel != null)
+            if (nextLevel != null && nextLevel != "")
             {
                 SceneManager.LoadScene(nextLevel);
             }
             else
             {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Debug.Log("Next scene not found. Check variable 'nextLevel'.");
             }
         }

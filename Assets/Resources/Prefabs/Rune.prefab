@@ -93,8 +93,6 @@ MonoBehaviour:
   highlightColor: {r: 0.61489856, g: 0.7560873, b: 0.9245283, a: 1}
   interactRange: 1.5
   itemSize: 0.2
-  lmb: {fileID: 0}
-  rmb: {fileID: 0}
   pickedUp: 0
 --- !u!212 &212647598388930132
 SpriteRenderer:
