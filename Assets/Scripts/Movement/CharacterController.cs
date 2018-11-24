@@ -65,6 +65,23 @@ public class CharacterController : MonoBehaviour {
 
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
+        var hit = Physics2D.RaycastAll(transform.position, -Vector2.up, 0.7f);
+
+        // If it hits something...
+
+        grounded = false;
+        foreach (RaycastHit2D item in hit)
+        {
+            if(item.collider.gameObject.tag != "Player" && item.collider.gameObject.tag != "Mouse")
+            {
+                Debug.Log(item.collider.gameObject);
+                
+                grounded = true;
+            }
+        }
+
+
+
 
         if (isHit == true)
         {
@@ -182,19 +199,19 @@ public class CharacterController : MonoBehaviour {
 
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
-    //private void  OnCollisionExit2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = false; }
-    private void OnCollisionEnter2D(Collision2D collision) {
-        groundedObjects += 1;
-        grounded = true;
-    }
-    private void OnCollisionExit2D(Collision2D collision) {
-        groundedObjects -= 1;
-        if(groundedObjects == 0)
-        {
-            grounded = false;
-        }
+    ////private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
+    ////private void  OnCollisionExit2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = false; }
+    //private void OnCollisionEnter2D(Collision2D collision) {
+    //    groundedObjects += 1;
+    //    grounded = true;
+    //}
+    //private void OnCollisionExit2D(Collision2D collision) {
+    //    groundedObjects -= 1;
+    //    if(groundedObjects == 0)
+    //    {
+    //        grounded = false;
+    //    }
         
-    }
-
+    //}
+    
 }

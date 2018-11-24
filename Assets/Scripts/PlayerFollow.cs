@@ -11,7 +11,9 @@ public class PlayerFollow : MonoBehaviour {
     public int maxY;
     [Range(-40, 0)]
     public int minX;
-    [Range(0, 40)]
+
+    //See on veidi suurem, kuna me ikka scrollime paremale ;)
+    [Range(0, 100)]
     public int maxX;
 
     public bool limitX;
