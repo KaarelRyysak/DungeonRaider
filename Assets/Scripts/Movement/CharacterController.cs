@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour {
 
@@ -54,6 +55,7 @@ public class CharacterController : MonoBehaviour {
     {
         rb2D.velocity = Vector3.zero;
         this.transform.position = initialTransformPosition;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Enne buildimist aktiveerige see, editoris see glitchib millegipärast
     }
 
     public void setPlayerPosition(Transform newPos)
@@ -166,6 +168,7 @@ public class CharacterController : MonoBehaviour {
         SetAllCollidersStatus(true);
 
         resetPlayerPosition();
+        
     }
 
     public void SetAllCollidersStatus(bool active){

@@ -30,7 +30,7 @@ public class TimeController : MonoBehaviour {
         float t = (Time.unscaledTime - startTime) / duration;
 
 
-        if (Input.GetKey(slowMotionShift) || Mathf.Abs(Input.GetAxis("Horizontal")) < minNormalTimeHoriz)
+        if (Input.GetKey(slowMotionShift) || Mathf.Abs(Input.GetAxis("Horizontal")) < minNormalTimeHoriz && Mathf.Abs(Input.GetAxis("Vertical")) < minNormalTimeHoriz)
         {
             Time.timeScale = Mathf.SmoothStep(1f, 0.2f, t);
             //Time.timeScale = 0.2f;
