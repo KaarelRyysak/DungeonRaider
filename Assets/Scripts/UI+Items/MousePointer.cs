@@ -63,14 +63,14 @@ public class MousePointer : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Consumable")
+        if(collision.gameObject.tag == "Consumable" || collision.gameObject.tag == "UISpear")
         {
             collision.gameObject.GetComponent<Consumable>().Highlight();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Consumable")
+        if (collision.gameObject.tag == "Consumable" || collision.gameObject.tag == "UISpear")
         {
             collision.gameObject.GetComponent<Consumable>().Unlight();
         }

@@ -27,6 +27,10 @@ public class CharacterController : MonoBehaviour {
     bool grounded = false;
     public Transform groundCheck;
 
+    private int groundedObjects = 0;
+    //Mitme asja vastu me hetkel l2heme
+
+
     //time effect
     private TimeController timeController;
     private PlayerDeathController PlayerDeathController;
@@ -179,7 +183,19 @@ public class CharacterController : MonoBehaviour {
         spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
-    private void  OnCollisionExit2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = false; }
+    //private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
+    //private void  OnCollisionExit2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = false; }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        groundedObjects += 1;
+        grounded = true;
+    }
+    private void OnCollisionExit2D(Collision2D collision) {
+        groundedObjects -= 1;
+        if(groundedObjects == 0)
+        {
+            grounded = false;
+        }
+        
+    }
 
 }
