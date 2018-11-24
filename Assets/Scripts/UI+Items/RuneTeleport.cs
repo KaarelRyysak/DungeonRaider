@@ -9,6 +9,9 @@ public class RuneTeleport : Consumable {
     public override void Use()
     {
         Debug.Log("used teleport");
+
+
+        Destroy(gameObject);
     }
 
     //This is what happens when the user starts holding down the button

@@ -9,7 +9,9 @@ public class UsableSpear : Consumable
     //This is what happens when the item is used (button released). Called by an InventoryButton
     public override void Use()
     {
-        Debug.Log("used teleport");
+        Spear spear = GameObject.Instantiate(Resources.Load<Spear>("Prefabs/Spear"), this.transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
+        spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        Destroy(gameObject);
     }
 
     //This is what happens when the user starts holding down the button
@@ -17,5 +19,6 @@ public class UsableSpear : Consumable
     {
         Debug.Log("Started aiming");
     }
+
 
 }

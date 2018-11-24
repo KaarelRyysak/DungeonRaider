@@ -28,6 +28,7 @@ public class Consumable : MonoBehaviour
     public float interactRange = 1.5f;
     public float itemSize = 0.2f;
     private MousePointer mousePointer;
+    private Rigidbody2D rb2d;
 
     //Set by mousePointer, is it close to mouse?
     private bool highlighted;
@@ -39,6 +40,7 @@ public class Consumable : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         //Finds the gameobject called "Player" and assigns it
@@ -76,6 +78,7 @@ public class Consumable : MonoBehaviour
                             //Make invisible and add to button
                             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0);
                             button.pickUp(this);
+                            rb2d.simulated = false;
                         }
                     }
                 }
@@ -86,6 +89,10 @@ public class Consumable : MonoBehaviour
             spriteRenderer.color = normalColor;
             //TODO: implement highlighting here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             glowing = false;
+        }
+        if (pickedUp)
+        {
+            transform.position = player.transform.position;
         }
     }
 

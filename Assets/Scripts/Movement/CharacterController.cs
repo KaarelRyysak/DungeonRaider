@@ -122,10 +122,7 @@ public class CharacterController : MonoBehaviour {
             rb2D.AddForce(new Vector2(0, JumpForce));
         }
         
-        if (Input.GetMouseButtonDown(0)) //throw spear
-        {
-            SpawnSpear();
-        }
+
     }
 
     void Flip()
@@ -179,8 +176,7 @@ public class CharacterController : MonoBehaviour {
 
     private void SpawnSpear()
     {
-        Spear spear = GameObject.Instantiate(Resources.Load<Spear>("Prefabs/Spear"), this.transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
-        spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
     }
 
     //private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
