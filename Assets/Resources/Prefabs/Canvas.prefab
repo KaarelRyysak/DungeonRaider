@@ -206,12 +206,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e46fc53aa42e84f996e2ec16529d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stored: {fileID: 0}
   storedImage: {fileID: 114316484426710208}
   keyCode: 324
 --- !u!114 &114743553561661636
@@ -283,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e46fc53aa42e84f996e2ec16529d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stored: {fileID: 0}
   storedImage: {fileID: 114366070772087636}
   keyCode: 323
 --- !u!222 &222080852058379946

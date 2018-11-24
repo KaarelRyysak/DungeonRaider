@@ -71,11 +71,12 @@ public class Spear : MonoBehaviour {
         // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
 
         if (collision.gameObject.tag == "Enemy") return;
-        if (touchedTip) replaceSpear();
-        else
-        {
-            Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
-        }
+
+        //if (touchedTip) replaceSpear();
+        //else
+        //{
+        //    Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
+        //}
     }
 
     //Annab tõuke targetPos suunas.
@@ -98,9 +99,9 @@ public class Spear : MonoBehaviour {
 
     private void replaceSpear()
     {
-        this.gameObject.SetActive(false);
-        spawnUISpear();
-        GameObject.Destroy(this);
+        //this.gameObject.SetActive(false);
+        //spawnUISpear();
+        //GameObject.Destroy(this);
     }
 
 

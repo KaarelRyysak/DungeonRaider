@@ -338,6 +338,21 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.26
       objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.764151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
   m_IsPrefabAsset: 0
@@ -865,6 +880,21 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8867924
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
   m_IsPrefabAsset: 0
@@ -959,6 +989,21 @@ Prefab:
     - target: {fileID: 1417241920092520, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
       propertyPath: m_Name
       value: Enemy - DinoStroller (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.8729342
+      objectReference: {fileID: 0}
+    - target: {fileID: 212305763661528910, guid: a35f4679d67ea064a91228339d3938d9,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7738519
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
