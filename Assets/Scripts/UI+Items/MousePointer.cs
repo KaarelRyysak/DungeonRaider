@@ -36,7 +36,7 @@ public class MousePointer : MonoBehaviour {
 
         // C#
         Vector3 v = worldPoint - player.transform.position;
-        v = Vector3.ClampMagnitude(v, maxRadius);
+        //v = Vector3.ClampMagnitude(v, maxRadius);
         worldPoint = player.transform.position + v;
 
 
