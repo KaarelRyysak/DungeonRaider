@@ -28,8 +28,7 @@ GameObject:
   - component: {fileID: 114750434332695106}
   - component: {fileID: 114118445870695394}
   - component: {fileID: 60748991209022564}
-  - component: {fileID: 58206979822226508}
-  - component: {fileID: 58554060150990504}
+  - component: {fileID: 70470155059222578}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -99,36 +98,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &58206979822226508
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390119885537704}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.022241604, y: -0.14426106}
-  serializedVersion: 2
-  m_Radius: 0.008382428
---- !u!58 &58554060150990504
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390119885537704}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.046645403, y: -0.14426106}
-  serializedVersion: 2
-  m_Radius: 0.0074557066
 --- !u!60 &60748991209022564
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -153,10 +122,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.038940072, y: 0.029152215}
-      - {x: -0.059129238, y: -0.12894195}
-      - {x: 0.035391092, y: -0.12901181}
+    - - {x: -0.05426824, y: 0.029152215}
+      - {x: -0.055563927, y: -0.1126872}
+      - {x: -0.053645015, y: -0.14788035}
+      - {x: -0.04470265, y: -0.12804028}
+      - {x: 0.025401473, y: -0.12812534}
+      - {x: 0.030380487, y: -0.14763746}
+      - {x: 0.034489512, y: -0.1010603}
       - {x: 0.033884764, y: 0.02863723}
+--- !u!70 &70470155059222578
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390119885537704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011536817, y: -0.14649396}
+  m_Size: {x: 0.07317642, y: 0.027013067}
+  m_Direction: 1
 --- !u!95 &95987450436291540
 Animator:
   serializedVersion: 3
