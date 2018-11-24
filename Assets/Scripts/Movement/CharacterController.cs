@@ -74,7 +74,6 @@ public class CharacterController : MonoBehaviour {
         {
             if(item.collider.gameObject.tag != "Player" && item.collider.gameObject.tag != "Mouse")
             {
-                Debug.Log(item.collider.gameObject);
                 
                 grounded = true;
             }
