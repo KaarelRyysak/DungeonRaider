@@ -11,6 +11,10 @@ public class UsableSpear : Consumable
     {
         Spear spear = GameObject.Instantiate(Resources.Load<Spear>("Prefabs/Spear"), this.transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
         spear.throwSpear(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+
+        //make sprite on button invisible
+        storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
+        storedImage.sprite = null;
         Destroy(gameObject);
     }
 

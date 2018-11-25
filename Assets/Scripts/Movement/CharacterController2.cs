@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterController : MonoBehaviour {
+public class CharacterController2 : MonoBehaviour {
+
+    private float TeleportTime;
+    private bool teleporting = false;
 
     //Conditions
     private bool facingRight = true;
@@ -65,68 +68,78 @@ public class CharacterController : MonoBehaviour {
 
 	// DeltaTime not needed in FixedUpdate
 	void FixedUpdate () {
-        var hit = Physics2D.RaycastAll(transform.position, -Vector2.up, 0.7f);
-
-        // If it hits something...
-
-        grounded = false;
-        foreach (RaycastHit2D item in hit)
+        if (teleporting)
         {
-            if(item.collider.gameObject.tag != "Player" && item.collider.gameObject.tag != "Mouse")
+            if (Time.time - TeleportTime > 0.5f)
             {
-                
-                grounded = true;
+                teleporting = false;
             }
         }
-
-
-
-
-        if (isHit == true)
+        else
         {
-            if (facingRight == true)
-            { //paremale suunatud
-                //deathMove(1);
+            var hit = Physics2D.RaycastAll(transform.position, -Vector2.up, 0.7f);
+
+            // If it hits something...
+
+            grounded = false;
+            foreach (RaycastHit2D item in hit)
+            {
+                if (item.collider.gameObject.tag != "Player" && item.collider.gameObject.tag != "Mouse")
+                {
+
+                    grounded = true;
+                }
+            }
+
+
+
+
+            if (isHit == true)
+            {
+                if (facingRight == true)
+                { //paremale suunatud
+                  //deathMove(1);
+                }
+                else
+                { //vasakule suunatud
+                  //deathMove(-1);
+                }
             }
             else
-            { //vasakule suunatud
-                //deathMove(-1);
+            {
+                //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+                anim.SetBool("IsJumping", !grounded);
+
+                anim.SetFloat("Speed", rb2D.velocity.y);
+                Debug.Log("wtf");
+
+                float move = Input.GetAxis("Horizontal");
+                rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
+
+                anim.SetFloat("Speed", Mathf.Abs(move));
+                anim.SetFloat("HeightSpeed", rb2D.velocity.y);
+
+                ////Change world time according to speed
+                //if (Mathf.Abs(move) > 0.4f)
+                //{
+                //    Time.timeScale = Mathf.Abs(move);
+                //}
+                //else
+                //{
+                //    Time.timeScale = 0.4f;
+                //}
+
+
+                if (move > 0 && !facingRight)
+                {
+                    Flip();
+                }
+                else if (move < 0 && facingRight)
+                {
+                    Flip();
+                }
             }
         }
-        else {
-            //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-            anim.SetBool("IsJumping", !grounded);
-
-            anim.SetFloat("Speed", rb2D.velocity.y);
-
-
-            float move = Input.GetAxis("Horizontal");
-            rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
-
-            anim.SetFloat("Speed", Mathf.Abs(move));
-            anim.SetFloat("HeightSpeed", rb2D.velocity.y);
-
-            ////Change world time according to speed
-            //if (Mathf.Abs(move) > 0.4f)
-            //{
-            //    Time.timeScale = Mathf.Abs(move);
-            //}
-            //else
-            //{
-            //    Time.timeScale = 0.4f;
-            //}
-
-
-            if (move > 0 && !facingRight)
-            {
-                Flip();
-            }
-            else if (move < 0 && facingRight)
-            {
-                Flip();
-            }
-        }
-
 	}
 
     void Update()
@@ -193,9 +206,11 @@ public class CharacterController : MonoBehaviour {
         }
     }
 
-    private void SpawnSpear()
+    //Disables movement for a short while so player can fly after dash
+    public void teleport()
     {
-
+        TeleportTime = Time.time;
+        teleporting = true;
     }
 
     ////private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }

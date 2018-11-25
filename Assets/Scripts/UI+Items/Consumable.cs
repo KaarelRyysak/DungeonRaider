@@ -17,6 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Consumable : MonoBehaviour
 {
@@ -27,8 +28,10 @@ public class Consumable : MonoBehaviour
     private GameObject player;
     public float interactRange = 1.5f;
     public float itemSize = 0.2f;
-    private MousePointer mousePointer;
-    private Rigidbody2D rb2d;
+    protected MousePointer mousePointer;
+    protected Rigidbody2D rb2d;
+    protected Rigidbody2D playerRb;
+    public Image storedImage;
 
     //Set by mousePointer, is it close to mouse?
     private bool highlighted;
@@ -41,6 +44,7 @@ public class Consumable : MonoBehaviour
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        playerRb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         //Finds the gameobject called "Player" and assigns it
@@ -48,6 +52,7 @@ public class Consumable : MonoBehaviour
 
         //Finds the gameobject called "MousePointer" and assigns it
         mousePointer = GameObject.Find("MousePointer").GetComponent<MousePointer>();
+        Debug.Log(mousePointer);
 
         highlighted = false;
         glowing = false;

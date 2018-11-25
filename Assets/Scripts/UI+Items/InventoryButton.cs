@@ -34,10 +34,6 @@ public class InventoryButton : MonoBehaviour {
                 {
                     //Using the item
                     stored.Use();
-                    //make sprite on button invisible
-                    storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
-                    storedImage.sprite = null;
-                    stored = null;
                 }
             }
         }
@@ -55,6 +51,7 @@ public class InventoryButton : MonoBehaviour {
         //Pick it up if it's not there yet
         stored = pickedUp;
         storedImage.sprite = stored.GetSprite();
+        pickedUp.storedImage = storedImage;
         //make sprite visible
         storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 1);
         stored.PickUp();
