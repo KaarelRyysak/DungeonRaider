@@ -189,7 +189,7 @@ public class CharacterController2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy") {
+        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "EnemyHazard") {
             anim.SetBool("Hit", true);
             anim.SetBool("IsJumping", false);
             isHit = true;
@@ -200,7 +200,7 @@ public class CharacterController2 : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "EnemyHazard")
         {
             anim.SetBool("Hit", false);
             isHit = false;
