@@ -57,20 +57,15 @@ public class DinoWalkerMovement : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        //Do things to contact item, such as player
-        isWalking = false;
-        animator.SetBool("IsTrigger", true);
-        animator.SetBool("IsWalking", false);
+        if (collision.tag != "Mouse") {
+            isWalking = false;
+            animator.SetBool("IsTrigger", true);
+            animator.SetBool("IsWalking", false);
 
-        startTime = Time.time;
-        
+            startTime = Time.time;
+        }
 
     }
-
-
-
-
-
 
     private void Flip()
     {

@@ -33,9 +33,12 @@ public class DinoRunnerMovement : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Flip();
+        if (collision.tag != "Mouse")
+        {
+            Flip();
+        }
+        
     }
-
 
 
 

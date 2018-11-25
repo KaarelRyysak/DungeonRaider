@@ -5550,7 +5550,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  CameraDistance: {x: 0, y: 0, z: -1}
+  minY: 0
+  maxY: 0
+  minX: 0
+  maxX: 0
+  limitX: 0
+  limitY: 0
 --- !u!114 &1945717813 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114737237680995860, guid: 951da2969a75c634f90465a842bc8861,
