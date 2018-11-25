@@ -111,7 +111,6 @@ public class CharacterController2 : MonoBehaviour {
                 anim.SetBool("IsJumping", !grounded);
 
                 anim.SetFloat("Speed", rb2D.velocity.y);
-                Debug.Log("wtf");
 
                 float move = Input.GetAxis("Horizontal");
                 rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
