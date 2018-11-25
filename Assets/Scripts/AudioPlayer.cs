@@ -12,7 +12,7 @@ public class AudioPlayer : MonoBehaviour {
     public static AudioPlayer instance;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         instance = this;
 	}
 	
