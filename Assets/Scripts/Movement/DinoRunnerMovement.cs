@@ -18,7 +18,11 @@ public class DinoRunnerMovement : MonoBehaviour {
         rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 
         if (facingRight == -1)
+        {
             Flip();
+            Flip();
+        }
+            
 
     }
 
