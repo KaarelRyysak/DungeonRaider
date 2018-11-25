@@ -173,11 +173,12 @@ public class CharacterController2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy") {
+        if (col.gameObject.tag == "Enemy")
+        {
             anim.SetBool("Hit", true);
             anim.SetBool("IsJumping", false);
             isHit = true;
-            SetAllCollidersStatus(false);           
+            SetAllCollidersStatus(false);
             rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
         }
     }
@@ -190,6 +191,28 @@ public class CharacterController2 : MonoBehaviour {
             isHit = false;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            anim.SetBool("Hit", true);
+            anim.SetBool("IsJumping", false);
+            isHit = true;
+            SetAllCollidersStatus(false);
+            rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            anim.SetBool("Hit", false);
+            isHit = false;
+        }
+    }
+
 
     private void OnBecameInvisible(){
         anim.SetBool("Hit", false);
