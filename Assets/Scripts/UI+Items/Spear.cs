@@ -99,6 +99,8 @@ public class Spear : MonoBehaviour {
 
     private void replaceSpear()
     {
+        AudioPlayer.instance.clinkAudioGroup.Play();
+
         this.gameObject.SetActive(false);
         spawnUISpear();
         GameObject.Destroy(this);

@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CharacterController2 : MonoBehaviour {
+
+    float lastStepTime;
 
     private float TeleportTime;
     private bool teleporting = false;
@@ -52,6 +55,8 @@ public class CharacterController2 : MonoBehaviour {
         PlayerDeathController = GetComponent<PlayerDeathController>();
         initialTransformPosition = this.transform.position;
         isHit = false;
+
+        lastStepTime = Time.time;
     }
 	
     void resetPlayerPosition()
@@ -115,6 +120,16 @@ public class CharacterController2 : MonoBehaviour {
                 float move = Input.GetAxis("Horizontal");
                 rb2D.velocity = new Vector2(move * maxSpeed, rb2D.velocity.y);
 
+                //Step if it's the time
+                if (grounded && Math.Abs(Input.GetAxis("Horizontal")) > 0.5f)
+                {
+                    if(Time.time - lastStepTime > 0.4f)
+                    {
+                        AudioPlayer.instance.stepAudioGroup.Play();
+                        lastStepTime = Time.time;
+                    }
+                }
+
                 anim.SetFloat("Speed", Mathf.Abs(move));
                 anim.SetFloat("HeightSpeed", rb2D.velocity.y);
 
@@ -150,6 +165,8 @@ public class CharacterController2 : MonoBehaviour {
         {
             //anim.SetBool("IsJumping", true);
             rb2D.AddForce(new Vector2(0, JumpForce));
+
+            AudioPlayer.instance.jumpAudioGroup.Play();
         }
         
 
@@ -233,6 +250,8 @@ public class CharacterController2 : MonoBehaviour {
     {
         TeleportTime = Time.time;
         teleporting = true;
+        grounded = false;
+        anim.SetBool("IsJumping", true);
     }
 
     ////private void OnCollisionEnter2D(Collision2D collision) { if (collision.gameObject.tag == "UISpear" || collision.gameObject.tag == "WalkableTerrain") grounded = true; }
