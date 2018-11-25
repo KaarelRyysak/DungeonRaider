@@ -13,6 +13,7 @@ TagManager:
   - RC
   - UISpear
   - WalkableTerrain
+  - EnemyHazard
   layers:
   - Default
   - TransparentFX
