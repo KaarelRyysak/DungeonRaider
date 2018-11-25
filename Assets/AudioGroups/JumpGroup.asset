@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720524295561bd44d91232d276d88994, type: 3}
   m_Name: JumpGroup
   m_EditorClassIdentifier: 
-  VolumeMin: 1
-  VolumeMax: 1
-  PitchMin: 1
-  PitchMax: 1
+  VolumeMin: 0.121
+  VolumeMax: 0.212
+  PitchMin: 0.872
+  PitchMax: 1.301
   Cooldown: 0.1
   audioClips:
   - {fileID: 8300000, guid: ef8366a7431dda643a0fa446701a28e3, type: 3}

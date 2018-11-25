@@ -167,6 +167,7 @@ MonoBehaviour:
   highlightColor: {r: 0.6156863, g: 0.75686276, b: 0.9254902, a: 1}
   interactRange: 1.5
   itemSize: 0.2
+  storedImage: {fileID: 0}
   pickedUp: 0
 --- !u!212 &212974305815049504
 SpriteRenderer:

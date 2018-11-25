@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720524295561bd44d91232d276d88994, type: 3}
   m_Name: StepGroup
   m_EditorClassIdentifier: 
-  VolumeMin: 1
-  VolumeMax: 1
-  PitchMin: 1
-  PitchMax: 1
+  VolumeMin: 0.535
+  VolumeMax: 0.654
+  PitchMin: 0.506
+  PitchMax: 1.114
   Cooldown: 0.1
   audioClips:
   - {fileID: 8300000, guid: f777e126d081e6b47927b05f480e826e, type: 3}

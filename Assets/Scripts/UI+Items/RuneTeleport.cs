@@ -33,6 +33,8 @@ public class RuneTeleport : Consumable {
 
         playerRb.gameObject.GetComponent<CharacterController2>().teleport();
 
+        AudioPlayer.instance.wooshAudioGroup.Play();
+
         //Change sprite to be damaged
         storedImage.sprite = damagedSprite;
 
