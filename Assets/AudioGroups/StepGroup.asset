@@ -16,4 +16,5 @@ MonoBehaviour:
   PitchMin: 1
   PitchMax: 1
   Cooldown: 0.1
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: f777e126d081e6b47927b05f480e826e, type: 3}

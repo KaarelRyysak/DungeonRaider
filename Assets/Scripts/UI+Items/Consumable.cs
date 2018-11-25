@@ -118,7 +118,7 @@ public class Consumable : MonoBehaviour
 
     public void PickUp()
     {
-        //AudioPlayer.instance.stepAudioGroup.Play();
+        AudioPlayer.instance.stepAudioGroup.Play();
         pickedUp = true;
     }
 
