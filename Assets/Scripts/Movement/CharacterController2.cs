@@ -57,15 +57,16 @@ public class CharacterController2 : MonoBehaviour {
         isHit = false;
 
         lastStepTime = Time.time;
+
+        Cursor.visible = false;
     }
 	
     void resetPlayerPosition()
     {
         rb2D.velocity = Vector3.zero;
         this.transform.position = initialTransformPosition;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Enne buildimist aktiveerige see, editoris see glitchib millegipärast
-        int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Enne buildimist aktiveerige see, editoris see glitchib millegipärast
+
     }
 
     public void setPlayerPosition(Transform newPos)
@@ -160,11 +161,10 @@ public class CharacterController2 : MonoBehaviour {
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    int index = 0;
-        //    SceneManager.LoadScene(index);
-        //}
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
 
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
