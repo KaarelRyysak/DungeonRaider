@@ -158,6 +158,11 @@ public class CharacterController2 : MonoBehaviour {
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
             grounded &&
