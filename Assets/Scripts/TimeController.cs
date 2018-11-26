@@ -21,7 +21,7 @@ public class TimeController : MonoBehaviour {
     void Start () {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
-        startTime = Time.unscaledTime;
+        startTime = Time.unscaledTime-duration;
     }
 	
 	// Update is called once per frame
