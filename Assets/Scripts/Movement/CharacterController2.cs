@@ -64,6 +64,8 @@ public class CharacterController2 : MonoBehaviour {
         rb2D.velocity = Vector3.zero;
         this.transform.position = initialTransformPosition;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Enne buildimist aktiveerige see, editoris see glitchib millegipärast
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
     }
 
     public void setPlayerPosition(Transform newPos)
@@ -158,10 +160,11 @@ public class CharacterController2 : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    int index = 0;
+        //    SceneManager.LoadScene(index);
+        //}
 
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
