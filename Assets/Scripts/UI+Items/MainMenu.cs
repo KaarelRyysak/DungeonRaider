@@ -6,4 +6,9 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene(8);
+    }
 }
