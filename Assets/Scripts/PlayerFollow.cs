@@ -5,19 +5,31 @@ using UnityEngine;
 public class PlayerFollow : MonoBehaviour {
     public Transform Player;
     //public Vector3 CameraDistance = new Vector3(0f, 0f, -1f);
+    [Header("Vertical movement")]
+
+    [SerializeField]
     [Range(-40, 0)]
-    public int minY;
+    private int minY;
+
+    [SerializeField]
     [Range(0, 40)]
-    public int maxY;
+    private int maxY;
+
+    [SerializeField]
+    private bool limitY;
+
+    [Header("Horizontal movement")]
+    [SerializeField]
     [Range(-40, 0)]
-    public int minX;
+    private int minX;
 
     //See on veidi suurem, kuna me ikka scrollime paremale ;)
+    [SerializeField]
     [Range(0, 100)]
-    public int maxX;
+    private int maxX;
 
-    public bool limitX;
-    public bool limitY;
+    [SerializeField]
+    private bool limitX;
 
 
 

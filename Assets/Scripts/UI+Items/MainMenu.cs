@@ -12,6 +12,11 @@ public class MainMenu : MonoBehaviour {
         levels.SetActive(false);
     }
 
+    private void Start()
+    {
+        Cursor.visible = true;
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -32,5 +37,10 @@ public class MainMenu : MonoBehaviour {
     public void StartLevel(int level)
     {
         SceneManager.LoadScene(level);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
