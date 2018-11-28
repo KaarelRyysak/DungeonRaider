@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DinoWalkerMovement : MonoBehaviour {
+public class DinoWalkerMovement : AbstractEnemy {
 
     public Animator animator;
 
