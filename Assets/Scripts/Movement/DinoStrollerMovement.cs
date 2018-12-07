@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DinoStrollerMovement : MonoBehaviour {
+public class DinoStrollerMovement : AbstractEnemy {
 
     public Animator animator;
 

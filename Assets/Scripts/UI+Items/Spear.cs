@@ -70,7 +70,11 @@ public class Spear : MonoBehaviour {
     {
         // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
 
-        if (collision.gameObject.tag == "Enemy") return;
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Physics2D.IgnoreCollision(collision.otherCollider, collision.collider);
+            return;
+        }
 
         if (touchedTip) replaceSpear();
         else
