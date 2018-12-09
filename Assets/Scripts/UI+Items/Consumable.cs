@@ -23,14 +23,27 @@ public class Consumable : MonoBehaviour
 {
 
     SpriteRenderer spriteRenderer;
-    public Color normalColor;
-    public Color highlightColor;
+
+
+    [Header("General options")]
+    [SerializeField]
+    private Color normalColor;
+
+    [SerializeField]
+    private Color highlightColor;
+
+    [SerializeField]
+    private float interactRange = 1.5f;
+
+    [SerializeField]
+    private float itemSize = 0.2f;
+
     private GameObject player;
-    public float interactRange = 1.5f;
-    public float itemSize = 0.2f;
     protected MousePointer mousePointer;
     protected Rigidbody2D rb2d;
     protected Rigidbody2D playerRb;
+
+    [HideInInspector]
     public Image storedImage;
 
     //Set by mousePointer, is it close to mouse?
@@ -38,6 +51,8 @@ public class Consumable : MonoBehaviour
 
 
     private bool glowing;
+
+    [HideInInspector]
     public bool pickedUp;
 
     // Use this for initialization
@@ -52,7 +67,6 @@ public class Consumable : MonoBehaviour
 
         //Finds the gameobject called "MousePointer" and assigns it
         mousePointer = GameObject.Find("MousePointer").GetComponent<MousePointer>();
-        Debug.Log(mousePointer);
 
         highlighted = false;
         glowing = false;

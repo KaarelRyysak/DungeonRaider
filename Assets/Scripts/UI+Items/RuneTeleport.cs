@@ -5,8 +5,15 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RuneTeleport : Consumable {
+    
+    [Header("Item settings")]
+    [SerializeField]
+    [Tooltip("Force of the teleport")]
     public float TeleForce;
+
     private int charges;
+
+    
     public Sprite damagedSprite;
 
 
