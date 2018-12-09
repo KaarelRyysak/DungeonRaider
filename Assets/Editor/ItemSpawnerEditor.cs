@@ -13,6 +13,10 @@ public class ItemSpawnerEditor : EditorWindow
     public float myRun;
     public float myWait;
     public Object source;
+    public Object source2;
+    public Object source3;
+
+    
 
     int selected = 0;
     string[] options = new string[]
@@ -60,11 +64,12 @@ public class ItemSpawnerEditor : EditorWindow
             myRun = EditorGUILayout.FloatField("Speed", myRun);
             myWait = EditorGUILayout.FloatField("WaitTime", myWait);
 
-            source = EditorGUILayout.ObjectField(source, typeof(Prefab), true);
+            source = EditorGUILayout.ObjectField(source, typeof(Object), true);
+
 
             if (GUILayout.Button("Spawn Stroller"))
             {
-                //GameObject.Instantiate<DinoStrollerMovement>()
+                Object Dino = GameObject.Instantiate<Object>(source);
             }
         }
 
@@ -73,7 +78,11 @@ public class ItemSpawnerEditor : EditorWindow
             GUILayout.Label("Dino Walker variables", EditorStyles.boldLabel);
             myRun = EditorGUILayout.FloatField("Speed", myRun);
             myWait = EditorGUILayout.FloatField("WaitTime", myWait);
-            if (GUILayout.Button("Spawn Walker")) { }
+            source2 = EditorGUILayout.ObjectField(source2, typeof(Object), true);
+            if (GUILayout.Button("Spawn Walker")) {
+                Object Dino = GameObject.Instantiate<Object>(source2);
+                
+            }
         }
         
         else if(selected == 2)
@@ -81,7 +90,10 @@ public class ItemSpawnerEditor : EditorWindow
             GUILayout.Label("Dino Runner variables", EditorStyles.boldLabel);
             myRun = EditorGUILayout.FloatField("Speed", myRun);
             myWait = EditorGUILayout.FloatField("WaitTime", myWait);
-            if (GUILayout.Button("Spawn Runner")) { }
+            source3 = EditorGUILayout.ObjectField(source3, typeof(Object), true);
+            if (GUILayout.Button("Spawn Runner")) {
+                Object Dino = GameObject.Instantiate<Object>(source3);
+            }
         }
 
         
