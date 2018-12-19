@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterController2 : MonoBehaviour {
+public class Player : MonoBehaviour {
 
     float lastStepTime;
 
@@ -198,12 +198,17 @@ public class CharacterController2 : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "EnemyHazard") {
-            anim.SetBool("Hit", true);
-            anim.SetBool("IsJumping", false);
-            isHit = true;
-            SetAllCollidersStatus(false);           
-            rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        anim.SetBool("Hit", true);
+        anim.SetBool("IsJumping", false);
+        isHit = true;
+        SetAllCollidersStatus(false);
+        rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
     }
 
     private void OnTriggerExit2D(Collider2D col)

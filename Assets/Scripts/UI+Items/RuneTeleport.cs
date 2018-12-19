@@ -38,7 +38,7 @@ public class RuneTeleport : Consumable {
         playerRb.angularVelocity = 0;
         playerRb.AddForce(forceVector * TeleForce);
 
-        playerRb.gameObject.GetComponent<CharacterController2>().teleport();
+        playerRb.gameObject.GetComponent<Player>().teleport();
 
         AudioPlayer.instance.wooshAudioGroup.Play();
 
