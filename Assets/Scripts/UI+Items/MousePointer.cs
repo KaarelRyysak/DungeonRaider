@@ -9,47 +9,34 @@ public class MousePointer : MonoBehaviour {
     public float maxRadius = 0.5f;
     public GameObject cursor;
 
-	// Use this for initialization
 	void Start () {
         //Finds the gameobject called "Player" and assigns it
         player = GameObject.Find("Player");
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
-
-
-
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Bounds bounds = OrthographicBounds(Camera.main);
 
-
-        Vector3 worldPoint2 = new Vector3(
-            Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
-            Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
-            0
-            );
-
-        worldPoint2 = Vector3.ClampMagnitude(worldPoint2, maxRadius);
         cursor.transform.position = new Vector3(worldPoint.x, worldPoint.y, cursor.transform.position.z);
 
+        /* 
+         * !!! These lines put the player and the cursor on different coordinate systems !!!
+         * Not sure why they were written - remove them at the end of the project if unused.
+         * 
         // C#
         Vector3 v = worldPoint - player.transform.position;
         //v = Vector3.ClampMagnitude(v, maxRadius);
         worldPoint = player.transform.position + v;
 
-
         Vector3 playerToMouse = worldPoint - player.transform.position;
-
-        
-        playerToMouse = new Vector3(playerToMouse.x, playerToMouse.y, 0f);
+        playerToMouse.z = 0f;
         playerToMouse = Vector3.ClampMagnitude(playerToMouse, maxRadius);
 
-
-
         transform.position = player.transform.position + playerToMouse;
-        
+        */
+        transform.position = worldPoint;
     }
 
     public Bounds OrthographicBounds(Camera camera)
