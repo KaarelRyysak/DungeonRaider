@@ -13,7 +13,7 @@ public class TeleportRune : Consumable {
 
     public override void Use()
     {
-        player.GetComponent<CharacterController2>().enabled = false; // et ei saaks animatsiooni ajal liikuda
+        player.GetComponent<Player>().enabled = false; // et ei saaks animatsiooni ajal liikuda
         player.GetComponent<PolygonCollider2D>().enabled = false; // et mängija ei saaks anim. ajal viga
         player.GetComponent<CapsuleCollider2D>().enabled = false;
         player.GetComponent<Rigidbody2D>().simulated = false; // et mängija ei kukuks animatsiooni ajal läbi maa
@@ -80,7 +80,7 @@ public class TeleportRune : Consumable {
         }
 
         player.GetComponent<Rigidbody2D>().simulated = true;
-        player.GetComponent<CharacterController2>().enabled = true;
+        player.GetComponent<Player>().enabled = true;
         player.GetComponent<PolygonCollider2D>().enabled = true;
         player.GetComponent<CapsuleCollider2D>().enabled = true;
         //player.GetComponent<TimeController>().enabled = true;
