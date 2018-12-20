@@ -93,6 +93,12 @@ public class Consumable : MonoBehaviour
                     {
                         if (button.storedImage.sprite == null)
                         {
+                            //Destroy the children
+                            //Can't make this a while loop, destroying children doesn't lower child count?? ¯\_('_')_/¯
+                            if (this.transform.childCount > 0)
+                            {
+                                Destroy(this.transform.GetChild(0).gameObject);
+                            }
                             //Make invisible and add to button
                             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0);
                             button.pickUp(this);
