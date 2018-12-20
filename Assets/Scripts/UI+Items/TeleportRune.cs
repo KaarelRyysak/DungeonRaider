@@ -84,6 +84,8 @@ public class TeleportRune : Consumable {
         player.GetComponent<PolygonCollider2D>().enabled = true;
         player.GetComponent<CapsuleCollider2D>().enabled = true;
         //player.GetComponent<TimeController>().enabled = true;
+
+        DestroyConsumable();
     }
 
     public void StartFadingOut()

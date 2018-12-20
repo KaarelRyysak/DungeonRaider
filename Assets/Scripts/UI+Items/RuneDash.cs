@@ -49,10 +49,7 @@ public class RuneDash : Consumable {
         charges -= 1;
         if(charges <= 0)
         {
-            //make sprite on button invisible
-            storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
-            storedImage.sprite = null;
-            Destroy(gameObject);
+            DestroyConsumable();
         }
         
     }

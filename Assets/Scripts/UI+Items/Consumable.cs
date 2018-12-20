@@ -155,4 +155,11 @@ public class Consumable : MonoBehaviour
     {
         highlighted = false;
     }
+
+    public void DestroyConsumable()
+    {
+        storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
+        storedImage.sprite = null;
+        Destroy(gameObject);
+    }
 }
