@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef334d0a203ef9240b1765c8daf61c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0, g: 0, b: 0, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 0.6156863, g: 0.75686276, b: 0.9254902, a: 1}
   interactRange: 1.5
   itemSize: 0.2
   storedImage: {fileID: 0}
