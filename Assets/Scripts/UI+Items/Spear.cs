@@ -39,6 +39,7 @@ public class Spear : MonoBehaviour {
             Regex dinorunner = new Regex("DinoRunner.*");
             Regex dinostatue = new Regex("DinoStatue.*");
             Regex dinowalker = new Regex("DinoWalker.*");
+            Regex dinothrower = new Regex("DinoThrower.*");
 
             //Tuvastada vastase tüüp
             if (dinostroller.IsMatch(collision.gameObject.name))
@@ -56,6 +57,10 @@ public class Spear : MonoBehaviour {
             else if (dinowalker.IsMatch(collision.gameObject.name))
             {
                 GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoWalker"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+            else if (dinothrower.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoRunner"), collision.gameObject.transform.position - deadShift, deadRotation);
             }
 
             GameObject.Destroy(collision.gameObject);

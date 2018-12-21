@@ -31,7 +31,6 @@ public class EnemySpear : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // TABATI ODA TIPPU
-
         if (collision.gameObject.tag == "Enemy")
         {
             Quaternion deadRotation = Quaternion.Euler(0, 0, 90);
@@ -42,6 +41,7 @@ public class EnemySpear : MonoBehaviour
             Regex dinorunner = new Regex("DinoRunner.*");
             Regex dinostatue = new Regex("DinoStatue.*");
             Regex dinowalker = new Regex("DinoWalker.*");
+            Regex dinothrower = new Regex("DinoThrower.*");
 
             //Tuvastada vastase tüüp
             if (dinostroller.IsMatch(collision.gameObject.name))
@@ -59,6 +59,10 @@ public class EnemySpear : MonoBehaviour
             else if (dinowalker.IsMatch(collision.gameObject.name))
             {
                 GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoWalker"), collision.gameObject.transform.position - deadShift, deadRotation);
+            }
+            else if (dinothrower.IsMatch(collision.gameObject.name))
+            {
+                GameObject.Instantiate(Resources.Load("Prefabs/Enemies/DeadEnemies/DeadDinoRunner"), collision.gameObject.transform.position - deadShift, deadRotation);
             }
 
             GameObject.Destroy(collision.gameObject);
