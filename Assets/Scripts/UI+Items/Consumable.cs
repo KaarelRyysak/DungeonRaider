@@ -38,10 +38,12 @@ public class Consumable : MonoBehaviour
     [SerializeField]
     private float itemSize = 0.2f;
 
-    private GameObject player;
+    protected GameObject player;
     protected MousePointer mousePointer;
-    protected Rigidbody2D rb2d;
+    protected Rigidbody2D consumableRb;
     protected Rigidbody2D playerRb;
+    protected SpriteRenderer playerSprite;
+
 
     [HideInInspector]
     public Image storedImage;
@@ -55,25 +57,22 @@ public class Consumable : MonoBehaviour
     [HideInInspector]
     public bool pickedUp;
 
-    // Use this for initialization
     void Start()
     {
-        rb2d = gameObject.GetComponent<Rigidbody2D>();
-        playerRb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-        //Finds the gameobject called "Player" and assigns it
+        consumableRb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
+        playerRb = player.GetComponent<Rigidbody2D>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         //Finds the gameobject called "MousePointer" and assigns it
         mousePointer = GameObject.Find("MousePointer").GetComponent<MousePointer>();
+        playerSprite = player.GetComponent<SpriteRenderer>();
 
         highlighted = false;
         glowing = false;
         pickedUp = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //If it's highlighted, for each button, if the button is pressed, try to take it
@@ -103,7 +102,7 @@ public class Consumable : MonoBehaviour
                             //Make invisible and add to button
                             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0);
                             button.pickUp(this);
-                            rb2d.simulated = false;
+                            consumableRb.simulated = false;
                         }
                     }
                 }
@@ -155,5 +154,12 @@ public class Consumable : MonoBehaviour
     public void Unlight()
     {
         highlighted = false;
+    }
+
+    public void DestroyConsumable()
+    {
+        storedImage.color = new Color(storedImage.color.r, storedImage.color.g, storedImage.color.b, 0);
+        storedImage.sprite = null;
+        Destroy(gameObject);
     }
 }

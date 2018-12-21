@@ -9,13 +9,11 @@ public class MousePointer : MonoBehaviour {
     public float maxRadius = 0.5f;
     public GameObject cursor;
 
-	// Use this for initialization
 	void Start () {
         //Finds the gameobject called "Player" and assigns it
         player = GameObject.Find("Player");
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
 
@@ -26,7 +24,7 @@ public class MousePointer : MonoBehaviour {
         /* See on mingi asi, mis Jaggo koodist sai kopeeritud ja mis ei tööta eriti
         
         Bounds bounds = OrthographicBounds(Camera.main);
-
+        
         Vector3 worldPoint2 = new Vector3(
             Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
             Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
@@ -50,7 +48,7 @@ public class MousePointer : MonoBehaviour {
         
         //Kasutame vektorit, et liigutada selectorit
         transform.position = player.transform.position + playerToMouse;
-        
+
     }
 
     public Bounds OrthographicBounds(Camera camera)

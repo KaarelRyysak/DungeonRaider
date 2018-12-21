@@ -28,6 +28,7 @@ public class SpearTrap : MonoBehaviour {
             
             EnemySpear currentEnemy = currentSpear.transform.GetChild(0).gameObject.GetComponent<EnemySpear>();
 
+            //DISABLE ALL THE DAMN COLLISIONS
             foreach (Collider2D collider1 in this.gameObject.GetComponentsInChildren<Collider2D>())
             {
                 foreach (Collider2D collider2 in currentSpear.gameObject.GetComponentsInChildren<Collider2D>())
