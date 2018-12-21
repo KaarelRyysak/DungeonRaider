@@ -20,10 +20,12 @@ public class MousePointer : MonoBehaviour {
     {
 
 
-
+        //See on hiire asukoht maailma koordinaatides
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        /* See on mingi asi, mis Jaggo koodist sai kopeeritud ja mis ei tööta eriti
+        
         Bounds bounds = OrthographicBounds(Camera.main);
-
 
         Vector3 worldPoint2 = new Vector3(
             Mathf.Clamp(worldPoint.x, bounds.min.x, bounds.max.x),
@@ -32,22 +34,21 @@ public class MousePointer : MonoBehaviour {
             );
 
         worldPoint2 = Vector3.ClampMagnitude(worldPoint2, maxRadius);
+        */
+
+        //Liigutame hiire kursorit
         cursor.transform.position = new Vector3(worldPoint.x, worldPoint.y, cursor.transform.position.z);
-
-        // C#
-        Vector3 v = worldPoint - player.transform.position;
-        //v = Vector3.ClampMagnitude(v, maxRadius);
-        worldPoint = player.transform.position + v;
-
-
+        
+        //Vektor, mis läheb mängijast hiire positsiooni poole
         Vector3 playerToMouse = worldPoint - player.transform.position;
 
-        
+        //Ignoreerime z-koordinaadi muudatust
         playerToMouse = new Vector3(playerToMouse.x, playerToMouse.y, 0f);
+
+        //Piirame vektori suurust, et see mängija lähedal oleks
         playerToMouse = Vector3.ClampMagnitude(playerToMouse, maxRadius);
-
-
-
+        
+        //Kasutame vektorit, et liigutada selectorit
         transform.position = player.transform.position + playerToMouse;
         
     }

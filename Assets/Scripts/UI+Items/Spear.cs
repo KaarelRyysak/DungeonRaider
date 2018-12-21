@@ -107,7 +107,15 @@ public class Spear : MonoBehaviour {
 
         this.gameObject.SetActive(false);
         spawnUISpear();
-        GameObject.Destroy(this);
+        if (this.transform.childCount > 0)
+        {
+            Destroy(this.transform.GetChild(0).gameObject);
+        }
+        if (this.transform.parent != null)
+        {
+            Destroy(this.transform.parent.gameObject);
+        }
+        GameObject.Destroy(this.gameObject);
     }
 
 

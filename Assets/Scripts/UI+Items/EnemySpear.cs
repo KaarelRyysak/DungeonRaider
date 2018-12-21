@@ -13,7 +13,7 @@ public class EnemySpear : MonoBehaviour
 
     void Awake()
     {
-        rgbd2D = GetComponent<Rigidbody2D>();
+        rgbd2D = this.transform.parent.GetComponent<Rigidbody2D>();
         rgbd2D.interpolation = RigidbodyInterpolation2D.Interpolate;
         //Vector3 UpVector = this.transform.up;
         //Vector3 ForwardVector = Quaternion.AngleAxis(45, Vector3.up) * UpVector;
@@ -24,7 +24,7 @@ public class EnemySpear : MonoBehaviour
     {
         if (!stuck)
         {
-            this.transform.up = Vector3.SmoothDamp(this.transform.up, rgbd2D.velocity, ref Zero, 1f);
+            this.transform.parent.transform.up = Vector3.SmoothDamp(this.transform.up, rgbd2D.velocity, ref Zero, 1f);
         }
     }
 
@@ -62,13 +62,13 @@ public class EnemySpear : MonoBehaviour
             }
 
             GameObject.Destroy(collision.gameObject);
-        } 
-
+        }
         touchedTip = true;
+
+
         //replaceSpear();
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("hit");
             collision.gameObject.GetComponent<Player>().Die();
             touchedTip = false;
         }
@@ -77,12 +77,12 @@ public class EnemySpear : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
-
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player")
         {
-            Physics2D.IgnoreCollision(collision.otherCollider, collision.collider);
+            touchedTip = false;
             return;
         }
+        Debug.Log(collision.collider.gameObject.name);
 
         if (touchedTip) replaceSpear();
         else
@@ -97,7 +97,8 @@ public class EnemySpear : MonoBehaviour
         Vector3 diff = mousePosition - transform.position;
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        this.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        gameObject.transform.parent.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        
 
         Vector3 UpVector = this.transform.up;
         Vector3 ForwardVector = Quaternion.AngleAxis(45, Vector3.up) * UpVector;
@@ -115,7 +116,16 @@ public class EnemySpear : MonoBehaviour
 
         this.gameObject.SetActive(false);
         spawnUISpear();
-        GameObject.Destroy(this);
+
+        if (this.transform.childCount > 0)
+        {
+            Destroy(this.transform.GetChild(0).gameObject);
+        }
+        if (this.transform.parent != null)
+        {
+            Destroy(this.transform.parent.gameObject);
+        }
+        GameObject.Destroy(this.gameObject);
     }
 
 }
