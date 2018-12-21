@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpearTrap : MonoBehaviour {
-    
+public class DinoSpear : MonoBehaviour
+{
+
     public UsableSpear EnemySpearInstance;
     public GameObject spearSpawn;
     public GameObject spearTarget;
     public int spearNum;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +35,7 @@ public class SpearTrap : MonoBehaviour {
             EnemySpear currentEnemy = currentSpear.transform.GetChild(0).gameObject.GetComponent<EnemySpear>();
 
             //DISABLE ALL THE DAMN COLLISIONS (between spear and trap)
-            foreach (Collider2D collider1 in this.gameObject.GetComponentsInChildren<Collider2D>())
+            foreach (Collider2D collider1 in this.transform.parent.gameObject.GetComponentsInChildren<Collider2D>())
             {
                 foreach (Collider2D collider2 in currentSpear.gameObject.GetComponentsInChildren<Collider2D>())
                 {
@@ -41,7 +44,13 @@ public class SpearTrap : MonoBehaviour {
             }
 
             //Throw the spear
-            currentEnemy.throwSpear(spearTarget.transform.position);
+            currentEnemy.throwSpear(collision.gameObject.transform.position);
+
+            //Destroy this object, so spear isn't visible anymore
+            if(spearNum <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
