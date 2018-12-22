@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 60667498806224428}
   - component: {fileID: 60063983535583340}
   - component: {fileID: 114828959780707514}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: SlowSpear
   m_TagString: Spear
   m_Icon: {fileID: 0}
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardForce: 30
+  slowRate: 0.24
 --- !u!212 &212303205952121272
 SpriteRenderer:
   m_ObjectHideFlags: 1
