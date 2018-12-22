@@ -10,6 +10,9 @@ public class SlowSpear : MonoBehaviour
     private Vector3 Zero = Vector3.zero;
     public int ForwardForce = 50;
     bool touchedTip = false;
+    bool replaced = false;
+
+    public float slowRate = 0.5f;
 
     void Awake()
     {
@@ -24,15 +27,21 @@ public class SlowSpear : MonoBehaviour
     {
         if (!stuck)
         {
-            this.transform.up = Vector3.SmoothDamp(this.transform.up, rgbd2D.velocity, ref Zero, 1f);
 
             //Get slowdown vector
             Vector2 currentVelocity = rgbd2D.velocity;
-            Vector2 oppositeForce = -currentVelocity;
-
+            
             //Multiply vector by some small factor
-            oppositeForce = oppositeForce * 0.1f;
-            rgbd2D.AddRelativeForce(new Vector2(oppositeForce.x, oppositeForce.y));
+            rgbd2D.drag += (rgbd2D.velocity * slowRate).magnitude;
+
+
+            if (currentVelocity.x <= 3f && currentVelocity.y < 3f)
+            {
+                replaceSpear();
+            }
+
+            this.transform.up = Vector3.SmoothDamp(this.transform.up, rgbd2D.velocity, ref Zero, 1f);
+
         }
     }
 
@@ -92,9 +101,16 @@ public class SlowSpear : MonoBehaviour
             return;
         }
 
-        if (touchedTip) replaceSpear();
+        if (touchedTip)
+        {
+            if (replaced) return; //See on selleks, et duplicate-e ei tekiks
+            replaced = true;
+
+            replaceSpear();
+        }
         else
         {
+            Debug.Log("slow spear replace");
             Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
         }
     }
@@ -114,7 +130,7 @@ public class SlowSpear : MonoBehaviour
 
     private void spawnUISpear()
     {
-        GameObject.Instantiate(Resources.Load<UsableSpear>("Prefabs/UsableSpear"), this.transform.position, this.transform.rotation);
+        GameObject.Instantiate(Resources.Load<UsableSlowSpear>("Prefabs/UsableSlowSpear"), this.transform.position, this.transform.rotation);
     }
 
     private void replaceSpear()
@@ -131,7 +147,7 @@ public class SlowSpear : MonoBehaviour
         {
             Destroy(this.transform.parent.gameObject);
         }
-        GameObject.Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
 

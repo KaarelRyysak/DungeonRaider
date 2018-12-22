@@ -9,6 +9,7 @@ public class Spear : MonoBehaviour {
     private Vector3 Zero = Vector3.zero;
     public int ForwardForce = 50;
     bool touchedTip = false;
+    bool replaced = false;
 
 	void Awake () {
         rgbd2D = GetComponent<Rigidbody2D>();
@@ -81,7 +82,13 @@ public class Spear : MonoBehaviour {
             return;
         }
 
-        if (touchedTip) replaceSpear();
+        if (touchedTip)
+        {
+            if (replaced) return; //See on selleks, et duplicate-e ei tekiks
+            replaced = true;
+
+            replaceSpear();
+        }
         else
         {
             Invoke("replaceSpear", 3f); // TODO: hetkel vahetatakse füüsiline oda UI oma vastu välja 3 sekundit hiljem, aga see peaks toimuma siis kui oda seisma jäänud.
@@ -120,7 +127,7 @@ public class Spear : MonoBehaviour {
         {
             Destroy(this.transform.parent.gameObject);
         }
-        GameObject.Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
 

@@ -24,13 +24,4 @@ public class UsableSlowSpear : Consumable
         Debug.Log("Started aiming");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.gameObject.tag == "WallTrap")
-        {
-            Physics2D.IgnoreCollision(collision.otherCollider, collision.collider);
-            return;
-        }
-    }
-
 }
