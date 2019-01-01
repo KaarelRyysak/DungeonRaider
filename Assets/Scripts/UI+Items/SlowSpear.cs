@@ -35,9 +35,11 @@ public class SlowSpear : MonoBehaviour
             rgbd2D.drag += (rgbd2D.velocity * slowRate).magnitude;
 
 
-            if (currentVelocity.x <= 3f && currentVelocity.y < 3f)
+            if (Mathf.Abs(currentVelocity.x) <= 3f && Mathf.Abs(currentVelocity.y) < 3f)
             {
                 replaceSpear();
+                Debug.Log(currentVelocity.y);
+                Debug.Log(currentVelocity.x);
             }
 
             this.transform.up = Vector3.SmoothDamp(this.transform.up, rgbd2D.velocity, ref Zero, 1f);
@@ -95,7 +97,7 @@ public class SlowSpear : MonoBehaviour
     {
         // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player" )
         {
             Physics2D.IgnoreCollision(collision.otherCollider, collision.collider);
             return;

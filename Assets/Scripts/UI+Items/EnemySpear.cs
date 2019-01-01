@@ -80,6 +80,11 @@ public class EnemySpear : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.gameObject.tag == "WallTrap")
+        {
+            Physics2D.IgnoreCollision(collision.otherCollider, collision.collider);
+            return;
+        }
         // TABATI ODA TÜVE VÕI PEA LAIEMAT OSA (ST KÜLJE POOLT)
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player")
         {
