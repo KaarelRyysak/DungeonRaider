@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.1192107, y: 8.899454, z: 0}
   m_LocalScale: {x: 6.5040646, y: 6.5040646, z: 1.6260161}
   m_Children: []
   m_Father: {fileID: 0}
@@ -803,7 +803,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -906,8 +906,65 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 1
+        minScalar: 0
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
   SizeModule:
     enabled: 0
     curve:
@@ -1299,7 +1356,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     enabled: 1
-    mode: 0
+    mode: 1
     frameOverTime:
       serializedVersion: 2
       minMaxState: 1
@@ -1416,7 +1473,37 @@ ParticleSystem:
     flipV: 0
     randomRow: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300004, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300008, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300012, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300016, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300020, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300024, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300028, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300032, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300036, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300040, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300044, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300048, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300052, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300056, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300060, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300064, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300068, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300072, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300076, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300080, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300084, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300088, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300092, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300096, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300100, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300104, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300108, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300112, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300116, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
+    - sprite: {fileID: 21300120, guid: ca3884194b269fb4dba76d9778268c00, type: 3}
   VelocityModule:
     enabled: 0
     x:
