@@ -5,7 +5,8 @@ using UnityEngine;
 
 
 [CustomEditor(typeof(AttributeEnemies))]
-public class AttributeInGameText : Editor {
+public class AttributeInGameText : Editor
+{
 
     void onInspectorGUI()
     {
@@ -13,6 +14,6 @@ public class AttributeInGameText : Editor {
         GUILayout.Label("HELLO WORLD!");
         GUILayout.Button("this does nothing");
 
-        
+
     }
 }
