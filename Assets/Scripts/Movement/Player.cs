@@ -166,6 +166,11 @@ public class Player : MonoBehaviour {
             SceneManager.LoadScene("MainMenu");
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel.restartInstance.Restart();
+        }
+
         if (isHit == false &&
             Time.time > timeBetweenJumps + timeSinceLastJump &&
             grounded &&
