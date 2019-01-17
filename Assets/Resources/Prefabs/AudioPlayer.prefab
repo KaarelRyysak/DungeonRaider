@@ -153,6 +153,9 @@ MonoBehaviour:
   stepAudioGroup: {fileID: 11400000, guid: 8fa382b5484ea3e41ae1c3393d741c08, type: 2}
   wooshAudioGroup: {fileID: 11400000, guid: 56a6ce26b83cd0f42aa262eeec2266d1, type: 2}
   jumpAudioGroup: {fileID: 11400000, guid: 384ec3d79b5d8114a8cbe850c0d454a1, type: 2}
+  teleAudioGroup: {fileID: 11400000, guid: b7f1747620c8b4740bc0ab59089229dd, type: 2}
+  failedTeleAudioGroup: {fileID: 11400000, guid: 54f8e2af2f53b97428342cbefb82cdec,
+    type: 2}
 --- !u!114 &114856906817193680
 MonoBehaviour:
   m_ObjectHideFlags: 1
