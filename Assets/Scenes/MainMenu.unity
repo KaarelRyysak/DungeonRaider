@@ -4285,7 +4285,7 @@ MonoBehaviour:
   sounds:
   - clip: {fileID: 8300000, guid: efd72e85efd71e44daffc0aef720f2ba, type: 3}
     name: Start
-    volume: 0.438
+    volume: 0.142
     audioSource: {fileID: 0}
   - clip: {fileID: 8300000, guid: d73f882aff8594e44a842ef88828f9d9, type: 3}
     name: Hover
