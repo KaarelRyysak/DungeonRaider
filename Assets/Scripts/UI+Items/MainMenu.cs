@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     GameObject buttons;
     GameObject levels;
     GameObject instructions;
-    IEnumerator coroutine;
     MenuAudioManager menuAudioManager;
 
     Rigidbody2D[] buttonsRigidbodies;
@@ -46,6 +46,8 @@ public class MainMenu : MonoBehaviour {
         foreach (Rigidbody2D body in buttonsRigidbodiesList.GetRange(1, 2)) 
         {
             body.WakeUp();
+            body.GetComponentInParent<UIButton>().enabled = false;
+            body.GetComponentInParent<Button>().interactable = false;
         }
         StartCoroutine(ButtonFalloffTimer(Load, 1));
     }
@@ -84,6 +86,9 @@ public class MainMenu : MonoBehaviour {
         foreach (Rigidbody2D body in levelsRigidbodiesList)
         {
             body.WakeUp();
+            // Disabling interaction with other buttons
+            body.GetComponentInParent<UIButton>().enabled = false;
+            body.GetComponentInParent<Button>().interactable = false;
         }
         StartCoroutine(ButtonFalloffTimer(Load, level));
     }

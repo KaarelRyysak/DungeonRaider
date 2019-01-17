@@ -3020,6 +3020,7 @@ GameObject:
   - component: {fileID: 1114652180}
   - component: {fileID: 1114652179}
   - component: {fileID: 1114652182}
+  - component: {fileID: 1114652183}
   m_Layer: 5
   m_Name: LevelSelectionButton
   m_TagString: Untagged
@@ -3146,12 +3147,23 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 40
+  m_GravityScale: 50
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1114652183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114652177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763dc2d7b6636d9449554bbcac44a81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1249057092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,6 +3629,7 @@ GameObject:
   - component: {fileID: 1418603458}
   - component: {fileID: 1418603461}
   - component: {fileID: 1418603462}
+  - component: {fileID: 1418603463}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -3844,6 +3857,17 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1418603463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418603456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763dc2d7b6636d9449554bbcac44a81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1451999042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,6 +4441,7 @@ GameObject:
   - component: {fileID: 1602213033}
   - component: {fileID: 1602213036}
   - component: {fileID: 1602213037}
+  - component: {fileID: 1602213038}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -4561,12 +4586,23 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 50
+  m_GravityScale: 60
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1602213038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602213031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763dc2d7b6636d9449554bbcac44a81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649372694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4984,7 +5020,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.51
   m_Pitch: 1
   Loop: 0
   Mute: 0
