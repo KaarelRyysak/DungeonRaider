@@ -243,7 +243,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179346896
 GameObject:
@@ -4106,7 +4106,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4357162610451584, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4357162610451584, guid: a35f4679d67ea064a91228339d3938d9, type: 2}
       propertyPath: m_LocalScale.x
@@ -4172,7 +4172,7 @@ Transform:
   m_Children:
   - {fileID: 1837346703}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362905364
 GameObject:
@@ -4601,7 +4601,7 @@ Transform:
   m_Children:
   - {fileID: 910046563}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709943926
 GameObject:
@@ -10913,58 +10913,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1989085474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1989085477}
-  - component: {fileID: 1989085476}
-  - component: {fileID: 1989085475}
-  m_Layer: 0
-  m_Name: RespawnController
-  m_TagString: RC
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1989085475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989085474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7109771c44f945418fc79fb917f23a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1989085476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989085474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941bbadfe652131409b1b7c270d5ee4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1989085477
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989085474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: -3.325656}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016805976
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,7 +11087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4106787298678818, guid: d7cad6f19d34c50468d7fd603c13d688, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4106787298678818, guid: d7cad6f19d34c50468d7fd603c13d688, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
