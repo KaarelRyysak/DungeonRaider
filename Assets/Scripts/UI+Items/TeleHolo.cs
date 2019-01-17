@@ -32,7 +32,7 @@ public class TeleHolo : MonoBehaviour {
         {
             overlappers += 1;
             validSpot = false;
-            Debug.Log(collision.gameObject.tag + overlappers);
+            //Debug.Log(collision.gameObject.tag + overlappers);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -44,7 +44,7 @@ public class TeleHolo : MonoBehaviour {
             {
                 validSpot = true;
             }
-            Debug.Log(collision.gameObject.tag + overlappers);
+            //Debug.Log(collision.gameObject.tag + overlappers);
         }
     }
 
