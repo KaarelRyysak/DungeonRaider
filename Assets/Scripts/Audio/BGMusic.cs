@@ -27,7 +27,7 @@ public class BGMusic : MonoBehaviour {
 
         source = this.gameObject.GetComponent<AudioSource>();
 
-        Debug.Log("Instance: " + instance);
+        //Debug.Log("Instance: " + instance);
         
         //If there already is a music player, destroy this thing
         if(instance != null)
