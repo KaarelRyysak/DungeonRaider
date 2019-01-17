@@ -168,8 +168,7 @@ public class Player : MonoBehaviour {
 
             //Setting the time to be normal
             Time.timeScale = 1f;
-
-            AudioPlayer.instance.clickGroup.Play();
+            
 
             SceneManager.LoadScene("MainMenu");
         }
