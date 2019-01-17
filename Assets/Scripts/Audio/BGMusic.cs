@@ -6,16 +6,26 @@ using UnityEngine.SceneManagement;
 public class BGMusic : MonoBehaviour {
 
     [Range(0, 2)]
-    public float Volume = 1f;
+    public float volume = 1f;
     [Range(0, 2)]
-    public float Pitch = 1f;
+    public float pitch = 1f;
+    
+
+    public AudioClip[] audioClips;
+    public int[] clipStartLevelIndexes;
 
     public static BGMusic instance;
+
+    private int playingClip = -1;
+
+    private AudioSource source;
 
     //Always keep this gameObject there
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
+        source = this.gameObject.GetComponent<AudioSource>();
 
         Debug.Log("Instance: " + instance);
         
@@ -29,6 +39,8 @@ public class BGMusic : MonoBehaviour {
     private void Start()
     {
         instance = this;
+
+
     }
 
     void OnEnable()
@@ -46,8 +58,41 @@ public class BGMusic : MonoBehaviour {
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         
-        Debug.Log(scene.buildIndex);
+
+        //The clip that is looked at
+        int clipIndex = -1;
+        //The clip that will be played
+        int newSongIndex = 0;
+        //For every clip (index is its starting level)
+        foreach (int index in clipStartLevelIndexes)
+        {
+            clipIndex += 1;
+
+            //If we are past its starting point
+            if (scene.buildIndex >= index)
+            {
+                //Play that clip
+                newSongIndex = clipIndex;
+            }
+        }
+
+        //if we aren't already playing the clip and we're not in the menu
+        if (playingClip != newSongIndex && scene.buildIndex != 0)
+        {
+            //Play the clip
+            playingClip = newSongIndex;
+
+            Debug.Log(source);
+
+            source.clip = audioClips[newSongIndex];
+            source.loop = true;
+            source.volume = volume;
+            source.pitch = pitch;
+
+            source.Play();
+        }
     }
+    
 
 
 
