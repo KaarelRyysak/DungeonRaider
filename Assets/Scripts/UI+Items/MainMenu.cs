@@ -73,7 +73,7 @@ public class MainMenu : MonoBehaviour {
     {
         menuAudioManager.Play("Start");
 
-        if (level > 8) // Dirty
+        if (level >= 8) // Dirty
         {
             levelsRigidbodiesList.RemoveAt(level);
         }
