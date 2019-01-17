@@ -112,6 +112,9 @@ public class TeleportRune : Consumable {
             //Change sprite to be damaged
             storedImage.sprite = damagedSprite;
 
+            //Play sound
+            AudioPlayer.instance.teleAudioGroup.Play();
+
             //Use charge, destroy if empty
             charges -= 1;
             if (charges <= 0)
@@ -120,6 +123,11 @@ public class TeleportRune : Consumable {
 
                 DestroyConsumable();
             }
+        }
+        else
+        {
+            //Play sound
+            AudioPlayer.instance.failedTeleAudioGroup.Play();
         }
 
         

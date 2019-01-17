@@ -9,6 +9,9 @@ public class AudioPlayer : MonoBehaviour {
     public AudioClipGroup stepAudioGroup;
     public AudioClipGroup wooshAudioGroup;
     public AudioClipGroup jumpAudioGroup;
+    public AudioClipGroup teleAudioGroup;
+    public AudioClipGroup failedTeleAudioGroup;
+
     public static AudioPlayer instance;
 
 	// Use this for initialization
