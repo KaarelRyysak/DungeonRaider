@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VolumeMin: 1
   VolumeMax: 1
-  PitchMin: 1
-  PitchMax: 1
+  PitchMin: 0.788
+  PitchMax: 1.274
   Cooldown: 0.02
   audioClips:
   - {fileID: 8300000, guid: b2ca08233d58f074da5c69582f76b54c, type: 3}
