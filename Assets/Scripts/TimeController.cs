@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour {
 
+    public static TimeController instance;
+
     Rigidbody2D rb2D;
 
     public KeyCode slowMotionShift;
@@ -22,6 +24,7 @@ public class TimeController : MonoBehaviour {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
         startTime = Time.unscaledTime-duration;
+        instance = this;
     }
 	
 	// Update is called once per frame

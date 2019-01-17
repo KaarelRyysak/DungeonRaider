@@ -43,7 +43,7 @@ public class MainMenu : MonoBehaviour {
     public void StartGame()
     {
         menuAudioManager.Play("Start");
-        foreach (Rigidbody2D body in buttonsRigidbodiesList.GetRange(1, 3)) 
+        foreach (Rigidbody2D body in buttonsRigidbodiesList.GetRange(1, 2)) 
         {
             body.WakeUp();
         }

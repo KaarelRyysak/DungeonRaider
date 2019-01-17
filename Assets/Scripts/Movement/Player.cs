@@ -163,6 +163,12 @@ public class Player : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //Destroying the time controller, so time isn't altered anymore
+            Destroy(TimeController.instance.gameObject);
+
+            //Setting the time to be normal
+            Time.timeScale = 1f;
+            
             SceneManager.LoadScene("MainMenu");
         }
 
