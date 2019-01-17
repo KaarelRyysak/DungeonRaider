@@ -168,12 +168,15 @@ public class Player : MonoBehaviour {
 
             //Setting the time to be normal
             Time.timeScale = 1f;
-            
+
+            AudioPlayer.instance.clickGroup.Play();
+
             SceneManager.LoadScene("MainMenu");
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            AudioPlayer.instance.clickGroup.Play();
             RestartLevel.restartInstance.Restart();
         }
 
@@ -220,6 +223,8 @@ public class Player : MonoBehaviour {
         isHit = true;
         SetAllCollidersStatus(false);
         rb2D.AddForce(new Vector2(-1, 1) * 10, ForceMode2D.Impulse);
+
+        AudioPlayer.instance.deathGroup.Play();
     }
 
     private void OnTriggerExit2D(Collider2D col)
