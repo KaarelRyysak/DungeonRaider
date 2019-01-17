@@ -11,9 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720524295561bd44d91232d276d88994, type: 3}
   m_Name: FailedTeleGroup
   m_EditorClassIdentifier: 
-  VolumeMin: 1
-  VolumeMax: 1
-  PitchMin: 1
-  PitchMax: 1
+  VolumeMin: 0.35
+  VolumeMax: 0.5
+  PitchMin: 0.8
+  PitchMax: 1.1
   Cooldown: 0.1
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 3c6f6ff50f979d74dae742da78fb4469, type: 3}
+  - {fileID: 8300000, guid: 2c1c3ef5a4b2be949a6b2637f0bbc67d, type: 3}
