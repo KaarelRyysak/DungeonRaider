@@ -12,6 +12,10 @@ public class TeleportRune : Consumable {
     ParticleSystem effectParticleSystem;
     public float range = 2;
 
+    public TeleHolo holoInstance;
+
+    private TeleHolo hologram;
+
 
     private int charges;
 
@@ -22,6 +26,47 @@ public class TeleportRune : Consumable {
     private void Awake()
     {
         charges = 2;
+
+        Player player = GameObject.Find("Player").GetComponent<Player>();
+
+        
+
+    }
+
+    
+
+
+    private void Update()
+    {
+        base.Update();
+
+        if (pickedUp)
+        {
+            if (hologram == null)
+            {
+                //Teeme hologrami
+                hologram = GameObject.Instantiate(holoInstance, player.transform.position, player.transform.rotation, player.transform);
+            }
+            //See on hiire asukoht (ehk teleport sihtpunkt)
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            //Vektor, mis läheb mängijast teleport sihtpunkti
+            Vector3 playerToMouse = worldPoint - player.transform.position;
+
+            //Ignoreerime z-koordinaadi muudatust
+            playerToMouse = new Vector3(playerToMouse.x, playerToMouse.y, 0f);
+
+            //Piirame vektori suurust, et range liiga suur ei oleks
+            playerToMouse = Vector3.ClampMagnitude(playerToMouse, range);
+
+            //Kasutame vektorit, et määrata mängijast sihtpunkt
+            destination = player.transform.position + playerToMouse;
+
+            //Liigutame hologrami
+            hologram.transform.position = destination;
+        }
+
+        
     }
 
     public override void Use()
@@ -52,23 +97,32 @@ public class TeleportRune : Consumable {
 
         ////playerRb.velocity = new Vector2(0, 0);
 
-        particleEffectPrefab = (GameObject) Resources.Load("Prefabs/Implode_01");
-        GameObject effect = Instantiate(particleEffectPrefab, playerRb.position, Quaternion.identity);
-        effectParticleSystem = effect.GetComponent<ParticleSystem>();
-        effectParticleSystem.Play();
-        //StartFadingOut();
-        playerSprite.transform.position = destination;
 
-
-        //Change sprite to be damaged
-        storedImage.sprite = damagedSprite;
-
-        //Use charge, destroy if empty
-        charges -= 1;
-        if (charges <= 0)
+        //Kui tohib teleportida, telepordime
+        if (hologram.validSpot)
         {
-            DestroyConsumable();
+            particleEffectPrefab = (GameObject)Resources.Load("Prefabs/Implode_01");
+            GameObject effect = Instantiate(particleEffectPrefab, playerRb.position, Quaternion.identity);
+            effectParticleSystem = effect.GetComponent<ParticleSystem>();
+            effectParticleSystem.Play();
+            //StartFadingOut();
+            playerSprite.transform.position = destination;
+
+
+            //Change sprite to be damaged
+            storedImage.sprite = damagedSprite;
+
+            //Use charge, destroy if empty
+            charges -= 1;
+            if (charges <= 0)
+            {
+                Destroy(hologram.gameObject);
+
+                DestroyConsumable();
+            }
         }
+
+        
     }
 
 

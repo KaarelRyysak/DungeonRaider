@@ -73,7 +73,9 @@ public class Consumable : MonoBehaviour
         pickedUp = false;
     }
 
-    void Update()
+    
+
+    public virtual void Update()
     {
         //If it's highlighted, for each button, if the button is pressed, try to take it
         if (highlighted && !pickedUp)
