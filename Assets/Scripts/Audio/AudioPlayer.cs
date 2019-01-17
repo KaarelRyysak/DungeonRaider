@@ -11,6 +11,8 @@ public class AudioPlayer : MonoBehaviour {
     public AudioClipGroup jumpAudioGroup;
     public AudioClipGroup teleAudioGroup;
     public AudioClipGroup failedTeleAudioGroup;
+    public AudioClipGroup clickGroup;
+    public AudioClipGroup deathGroup;
 
     public static AudioPlayer instance;
 

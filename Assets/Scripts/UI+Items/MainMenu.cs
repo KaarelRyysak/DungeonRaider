@@ -56,6 +56,8 @@ public class MainMenu : MonoBehaviour {
     {
         buttons.SetActive(false);
         levels.SetActive(true);
+
+        AudioPlayer.instance.clickGroup.Play();
     }
 
     public void Back()
@@ -64,6 +66,8 @@ public class MainMenu : MonoBehaviour {
         levels.SetActive(false);
         buttons.SetActive(true);
         instructions.SetActive(false);
+
+        AudioPlayer.instance.clickGroup.Play();
     }
 
     public void Instructions()

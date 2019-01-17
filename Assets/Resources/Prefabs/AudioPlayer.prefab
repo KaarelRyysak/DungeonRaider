@@ -156,6 +156,8 @@ MonoBehaviour:
   teleAudioGroup: {fileID: 11400000, guid: b7f1747620c8b4740bc0ab59089229dd, type: 2}
   failedTeleAudioGroup: {fileID: 11400000, guid: 54f8e2af2f53b97428342cbefb82cdec,
     type: 2}
+  clickGroup: {fileID: 11400000, guid: bb4aeb1be0ede0844bbf7c504ab1371d, type: 2}
+  deathGroup: {fileID: 11400000, guid: 3adbbbbef6ffb4341a6c72f7a605b3fd, type: 2}
 --- !u!114 &114856906817193680
 MonoBehaviour:
   m_ObjectHideFlags: 1
