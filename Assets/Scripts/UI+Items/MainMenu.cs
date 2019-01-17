@@ -60,6 +60,7 @@ public class MainMenu : MonoBehaviour {
 
     public void Back()
     {
+        menuAudioManager.Play("Back");
         levels.SetActive(false);
         buttons.SetActive(true);
         instructions.SetActive(false);
